@@ -180,40 +180,22 @@
       font-size:.86rem;
       color:var(--muted);
     }
-    .hero-plate{
-      margin-top:4px;
-      height:150px;
+
+    /* NEW: hero photo for Twist Bowl */
+    .hero-photo{
+      margin-top:6px;
+      width:100%;
+      height:160px;
       border-radius:20px;
-      background:
-        radial-gradient(circle at 20% 0%,rgba(255,122,0,0.7),transparent 55%),
-        radial-gradient(circle at 80% 100%,rgba(255,122,0,0.4),transparent 55%),
-        #050505;
-      display:grid;
-      place-items:center;
-    }
-    .hero-plate-inner{
-      width:110px;
-      height:110px;
-      border-radius:999px;
-      border:4px solid var(--brand);
-      background:#111;
-      position:relative;
       overflow:hidden;
+      border:1px solid var(--border);
+      background:#050505;
     }
-    .hero-plate-inner::before,
-    .hero-plate-inner::after{
-      content:"";
-      position:absolute;
-      border-radius:999px;
-      background:#fff;
-      opacity:.98;
-    }
-    .hero-plate-inner::before{
-      inset:18% 22% 32% 18%;
-    }
-    .hero-plate-inner::after{
-      inset:44% 14% 12% 26%;
-      background:#ffb266;
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
     /* RIBBON */
@@ -269,12 +251,31 @@
       background:var(--card);
       border-radius:18px;
       border:1px solid var(--border);
-      padding:14px 12px 16px;
+      padding:12px 12px 16px;
       min-height:150px;
       display:flex;
       flex-direction:column;
       gap:8px;
+      overflow:hidden;
     }
+
+    /* NEW: image for each menu card */
+    .card-img{
+      width:100%;
+      height:98px;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#050505;
+      margin-bottom:4px;
+    }
+    .card-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
     .card-label{
       font-size:.8rem;
       text-transform:uppercase;
@@ -317,11 +318,20 @@
       color:var(--muted);
       margin-top:6px;
     }
+
+    /* UPDATED: featured image becomes a real image box */
     .feature-img{
       border-radius:18px;
-      background:
-        radial-gradient(circle at 0% 0%,rgba(255,122,0,0.6),transparent 55%),
-        #040404;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#040404;
+      min-height:180px;
+    }
+    .feature-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
     /* HIRING FOOTER */
@@ -347,6 +357,23 @@
       font-size:.9rem;
       color:var(--muted);
     }
+
+    /* NEW: hiring photo */
+    .hiring-photo{
+      width:min(360px,100%);
+      height:140px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#040404;
+    }
+    .hiring-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
     .foot-note{
       margin-top:10px;
       font-size:.8rem;
@@ -406,14 +433,16 @@
         <div class="hero-card">
           <div>
             <div class="hero-card-tag">Signature Feature</div>
-            <div class="hero-card-title">Twist Bowl </div>
+            <div class="hero-card-title">Twist Bowl</div>
             <p class="hero-card-body">
               Cilantro-lime rice, smoky chicken, roasted corn, crunchy toppings and a cool
               avocado ranch finish. Just one of many twists we’re crafting for opening day.
             </p>
           </div>
-          <div class="hero-plate">
-            <div class="hero-plate-inner"></div>
+
+          <!-- UPDATED: Twist Bowl photo -->
+          <div class="hero-photo">
+            <img src="twist.jpg" alt="Twist Bowl photo">
           </div>
         </div>
       </div>
@@ -433,72 +462,84 @@
 
       <div class="grid">
         <article class="card">
+          <div class="card-img"><img src="build-your-own.jpg" alt="Build-Your-Own"></div>
           <div class="card-label">Digital + In-Store</div>
           <div class="card-title">Build-Your-Own</div>
           <p class="card-body">Pick your base, protein, toppings and signature twist sauce. Your bowl, your rules.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="burrito.jpg" alt="Burrito"></div>
           <div class="card-label">Classic</div>
           <div class="card-title">Burrito</div>
           <p class="card-body">Soft flour tortilla packed tight with rice, beans, protein and all the extras.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="burrito-bowl.jpg" alt="Burrito Bowl"></div>
           <div class="card-label">Crowd Favorite</div>
           <div class="card-title">Burrito Bowl</div>
           <p class="card-body">All the burrito goodness, no wrap. More room for toppings and drizzle.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="salad.jpg" alt="Salad"></div>
           <div class="card-label">Greens</div>
           <div class="card-title">Salad</div>
           <p class="card-body">Crisp greens topped with warm proteins and bright citrus-chili dressing.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="lifestyle-bowls.jpg" alt="Lifestyle Bowls"></div>
           <div class="card-label">Lifestyle</div>
           <div class="card-title">Lifestyle Bowls</div>
           <p class="card-body">Higher-protein, veggie-forward and other curated bowls ready in one tap.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="quesadillas.jpg" alt="Quesadillas"></div>
           <div class="card-label">Cheesy</div>
           <div class="card-title">Quesadillas</div>
           <p class="card-body">Golden, melted and sliced. Served with trio of dips and house salsas.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="tacos.jpg" alt="Tacos"></div>
           <div class="card-label">Street-Style</div>
           <div class="card-title">Tacos</div>
           <p class="card-body">Soft or crunchy shells, stacked with fillings and finished with your twist.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="kids-meals.jpg" alt="Kid’s Meals"></div>
           <div class="card-label">For Little Foodies</div>
           <div class="card-title">Kid’s Meals</div>
           <p class="card-body">Smaller mains, sides and a drink – customisable but kid-approved.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="chips-sides.jpg" alt="Chips &amp; Sides"></div>
           <div class="card-label">Shareables</div>
           <div class="card-title">Chips &amp; Sides</div>
           <p class="card-body">Warm chips, guac, queso and salsa flights made for dipping and sharing.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="desserts.jpg" alt="Desserts"></div>
           <div class="card-label">Sweet Finish</div>
           <div class="card-title">Desserts</div>
           <p class="card-body">Crispy, cinnamon and chocolatey bites to close out your meal.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="drinks.jpg" alt="Drinks"></div>
           <div class="card-label">Refresh</div>
           <div class="card-title">Drinks</div>
           <p class="card-body">Aguas frescas, sodas and cold brew to pair with every bite.</p>
         </article>
 
         <article class="card">
+          <div class="card-img"><img src="catering.jpg" alt="Catering"></div>
           <div class="card-label">Events</div>
           <div class="card-title">Catering</div>
           <p class="card-body">Build-your-own bars and party trays for office, game day and celebrations.</p>
@@ -516,7 +557,7 @@
       <div class="feature-strip">
         <div>
           <div class="feature-tag">Limited Drop</div>
-          <div class="feature-title">High protein bowls with chimichurri </div>
+          <div class="feature-title">High protein bowls with chimichurri</div>
           <p class="feature-body">
             Flame-seared carne asada finished with a smoky red chimichurri, citrus lime and fresh cilantro.
             Add it to any bowl, burrito or taco when we open.
@@ -526,7 +567,11 @@
             <a href="#menu" class="btn">See how it fits the menu</a>
           </div>
         </div>
-        <div class="feature-img" aria-hidden="true"></div>
+
+        <!-- UPDATED: Featured photo -->
+        <div class="feature-img" aria-hidden="true">
+          <img src="featured.jpg" alt="Featured chimichurri bowl">
+        </div>
       </div>
     </section>
 
@@ -541,6 +586,10 @@
           </div>
         </div>
 
+        <!-- NEW: Hiring photo -->
+        <div class="hiring-photo" aria-hidden="true">
+          <img src="hiring.jpg" alt="Taco’s Twist team at work">
+        </div>
       </div>
 
       <p class="foot-note">
