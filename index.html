@@ -51,22 +51,66 @@
       letter-spacing:.04em;
       text-transform:uppercase;
     }
+
+    /* UPDATED: bigger + responsive logo size */
     .logo-box{
-      width:44px;
-      height:44px;
-      border-radius:12px;
+      width:clamp(56px, 5vw, 74px); /* was 44px */
+      height:clamp(56px, 5vw, 74px); /* was 44px */
+      border-radius:16px;
       overflow:hidden;
       border:1px solid var(--border);
       background:#111;
       display:grid;
       place-items:center;
+      position:relative;
+      transform:translateZ(0);
     }
     .logo-box img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
+      will-change:transform, filter;
     }
+
+    /* NEW: logo animation */
+    .logo-anim img{
+      animation: logoFloat 3.2s ease-in-out infinite;
+    }
+    .logo-anim::after{
+      content:"";
+      position:absolute;
+      inset:-22%;
+      background:conic-gradient(from 180deg,
+        transparent 0%,
+        rgba(255,122,0,0.28) 18%,
+        transparent 38%,
+        rgba(255,122,0,0.22) 58%,
+        transparent 78%,
+        rgba(255,122,0,0.18) 100%);
+      animation: logoSpin 6.5s linear infinite;
+      opacity:.55;
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+    .logo-anim:hover img{
+      transform:scale(1.05);
+      filter:saturate(1.12) contrast(1.05);
+    }
+    @keyframes logoFloat{
+      0%,100%{ transform:translateY(0); }
+      50%{ transform:translateY(-2px); }
+    }
+    @keyframes logoSpin{
+      to{ transform:rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .logo-anim img,
+      .logo-anim::after{
+        animation:none !important;
+      }
+    }
+
     .nav{
       display:flex;
       flex-wrap:wrap;
@@ -185,7 +229,7 @@
     .hero-photo{
       margin-top:6px;
       width:100%;
-      height:220px; /* was 160px */
+      height:220px;
       border-radius:20px;
       overflow:hidden;
       border:1px solid var(--border);
@@ -262,7 +306,7 @@
     /* image for each menu card (SIZE INCREASED) */
     .card-img{
       width:100%;
-      height:140px; /* was 98px */
+      height:140px;
       border-radius:14px;
       overflow:hidden;
       border:1px solid var(--border);
@@ -325,7 +369,7 @@
       overflow:hidden;
       border:1px solid var(--border);
       background:#040404;
-      min-height:260px; /* was 180px */
+      min-height:260px;
     }
     .feature-img img{
       width:100%;
@@ -361,7 +405,7 @@
     /* hiring photo (SIZE INCREASED) */
     .hiring-photo{
       width:min(360px,100%);
-      height:190px; /* was 140px */
+      height:190px;
       border-radius:18px;
       overflow:hidden;
       border:1px solid var(--border);
@@ -391,8 +435,8 @@
     <!-- HEADER -->
     <header class="topbar">
       <div class="brand">
-        <div class="logo-box">
-          <!-- Your logo image -->
+        <!-- UPDATED: added class logo-anim for animation -->
+        <div class="logo-box logo-anim">
           <img src="logo.jpg" alt="Taco’s Twist logo">
         </div>
         <span>Taco’s&nbsp;Twist</span>
@@ -400,7 +444,7 @@
 
       <nav class="nav">
         <a href="#menu">Menu</a>
-        <a href="#featured">Featured</a>
+        <a href="#featured">Catering</a>
         <a href="#hiring">We’re Hiring</a>
       </nav>
     </header>
@@ -440,7 +484,6 @@
             </p>
           </div>
 
-          <!-- Twist Bowl photo -->
           <div class="hero-photo">
             <img src="twist.jpg" alt="Twist Bowl photo">
           </div>
@@ -539,8 +582,8 @@
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="birria.jpg" alt="birria"></div>
-          <div class="card-label">Beef/chicken</div>
+          <div class="card-img"><img src="birria.jpg" alt="Birria"></div>
+          <div class="card-label">Beef/Chicken</div>
           <div class="card-title">Birria</div>
           <p class="card-body">Traditional Birria Tacos with original flavours.</p>
         </article>
@@ -568,9 +611,8 @@
           </div>
         </div>
 
-        <!-- Featured photo -->
         <div class="feature-img" aria-hidden="true">
-          <img src="catering.jpg" alt="Featured chimichurri bowl">
+          <img src="catering.jpg" alt="Catering trays and burritos">
         </div>
       </div>
     </section>
@@ -586,9 +628,8 @@
           </div>
         </div>
 
-        <!-- Hiring photo -->
         <div class="hiring-photo" aria-hidden="true">
-          <img src="logo.jpg" alt="Taco’s Twist team at work">
+          <img src="logo.jpg" alt="Taco’s Twist logo">
         </div>
       </div>
 
