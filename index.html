@@ -814,7 +814,7 @@
         linear-gradient(135deg,#101010,#050505);
       padding:clamp(20px,4vw,34px);
       display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);
+      grid-template-columns:minmax(0,1fr);
       gap:24px;
       align-items:center;
       box-shadow:0 24px 60px rgba(0,0,0,0.56);
@@ -864,6 +864,7 @@
       grid-template-columns:repeat(2,minmax(0,1fr));
       gap:12px;
       margin-top:18px;
+      max-width:720px;
     }
 
     .contact-card{
@@ -896,40 +897,6 @@
       word-break:break-word;
     }
 
-    .role-list{
-      display:grid;
-      gap:10px;
-      position:relative;
-      z-index:1;
-    }
-
-    .role-pill{
-      border-radius:999px;
-      border:1px solid rgba(255,122,0,0.28);
-      padding:10px 14px;
-      background:rgba(255,122,0,0.08);
-      color:#fff;
-      font-weight:800;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      transition:transform .18s ease,background .18s ease;
-    }
-
-    .role-pill:hover{
-      transform:translateX(6px);
-      background:rgba(255,122,0,0.14);
-    }
-
-    .role-pill::after{
-      content:"Apply";
-      color:var(--brand);
-      font-size:.78rem;
-      text-transform:uppercase;
-      letter-spacing:.12em;
-    }
-
     footer{
       margin:24px 0 20px;
     }
@@ -955,8 +922,7 @@
         grid-template-columns:repeat(3,minmax(0,1fr));
       }
 
-      .feature-strip,
-      .hiring-panel{
+      .feature-strip{
         grid-template-columns:minmax(0,1fr);
       }
     }
@@ -1344,13 +1310,13 @@
           <div class="hiring-kicker">We Are Hiring</div>
 
           <h2 id="hiring-title" class="hiring-title">
-            Build Taco’s Twist with us.
+            Join the Taco’s Twist Team.
           </h2>
 
           <p class="hiring-sub">
-            We are looking for energetic, reliable, and friendly team members for crew,
-            line, prep, cashier, and shift lead roles. If you love fast-paced restaurant
-            work and great customer service, reach out to us.
+            We are looking for energetic, reliable, and friendly people to join our opening team.
+            If you love fast-paced restaurant work, fresh food, and great customer service,
+            reach out to us today.
           </p>
 
           <div class="contact-grid">
@@ -1364,14 +1330,6 @@
               <a href="mailto:tacostwisthiring@gmail.com">tacostwisthiring@gmail.com</a>
             </div>
           </div>
-        </div>
-
-        <div class="role-list" aria-label="Hiring roles">
-          <div class="role-pill">Crew Members</div>
-          <div class="role-pill">Line Staff</div>
-          <div class="role-pill">Prep Team</div>
-          <div class="role-pill">Cashiers</div>
-          <div class="role-pill">Shift Leads</div>
         </div>
       </div>
     </section>
