@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Taco’s Twist | Bold Mexican Flavors Coming Soon</title>
-  <meta name="description" content="Taco’s Twist – modern Mexican flavors with a bold twist. Launching soon.">
+  <title>Taco’s Twist | Grand Opening Coming Soon</title>
+  <meta name="description" content="Taco’s Twist – Grand opening soon. Free chicken bowls, bold Mexican flavors, catering, and hiring opportunities.">
+
   <style>
     :root{
       --bg:#000000;
@@ -13,26 +14,92 @@
       --ink:#ffffff;
       --muted:#cdcdcd;
       --brand:#ff7a00;
-      --border:rgba(255,255,255,0.1);
+      --brand-light:#ff9b2f;
+      --brand-dark:#c95600;
+      --border:rgba(255,255,255,0.12);
+      --shadow-orange:rgba(255,122,0,0.38);
     }
 
-    *{box-sizing:border-box;}
-    html,body{height:100%;}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    html,body{
+      min-height:100%;
+    }
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:
-        radial-gradient(1100px 800px at 100% 0%,rgba(255,122,0,0.18),transparent 60%),
-        radial-gradient(1100px 800px at 0% 100%,rgba(255,122,0,0.14),transparent 60%),
-        var(--bg);
+        radial-gradient(900px 650px at 100% 0%,rgba(255,122,0,0.20),transparent 60%),
+        radial-gradient(900px 650px at 0% 100%,rgba(255,122,0,0.14),transparent 60%),
+        linear-gradient(180deg,#000000,#070707 45%,#000000);
       color:var(--ink);
+      overflow-x:hidden;
     }
-    a{text-decoration:none;color:inherit;}
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,0.8),transparent 75%);
+      z-index:-1;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
     .wrap{
-      max-width:1200px;
+      max-width:1220px;
       margin:0 auto;
-      padding:clamp(16px,3vw,28px);
+      padding:clamp(16px,3vw,30px);
+      position:relative;
+    }
+
+    .floating-glow{
+      position:absolute;
+      width:220px;
+      height:220px;
+      border-radius:999px;
+      background:rgba(255,122,0,0.16);
+      filter:blur(55px);
+      pointer-events:none;
+      animation: glowMove 8s ease-in-out infinite alternate;
+      z-index:-1;
+    }
+
+    .floating-glow.one{
+      top:90px;
+      right:20px;
+    }
+
+    .floating-glow.two{
+      top:680px;
+      left:-80px;
+      animation-delay:1.6s;
+    }
+
+    @keyframes glowMove{
+      from{
+        transform:translate3d(0,0,0) scale(1);
+        opacity:.5;
+      }
+      to{
+        transform:translate3d(28px,-24px,0) scale(1.14);
+        opacity:.9;
+      }
     }
 
     /* HEADER */
@@ -41,73 +108,76 @@
       align-items:center;
       justify-content:space-between;
       gap:16px;
-      padding-block:4px 8px;
+      padding-block:4px 12px;
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(16px);
+      background:linear-gradient(180deg,rgba(0,0,0,0.92),rgba(0,0,0,0.62));
+      border-bottom:1px solid rgba(255,255,255,0.05);
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
-      font-weight:800;
-      letter-spacing:.04em;
+      gap:12px;
+      font-weight:900;
+      letter-spacing:.05em;
       text-transform:uppercase;
     }
 
-    /* UPDATED: bigger + responsive logo size */
     .logo-box{
-      width:clamp(56px, 5vw, 74px); /* was 44px */
-      height:clamp(56px, 5vw, 74px); /* was 44px */
-      border-radius:16px;
+      width:clamp(58px,5vw,76px);
+      height:clamp(58px,5vw,76px);
+      border-radius:18px;
       overflow:hidden;
       border:1px solid var(--border);
       background:#111;
       display:grid;
       place-items:center;
       position:relative;
-      transform:translateZ(0);
+      box-shadow:0 0 30px rgba(255,122,0,0.18);
     }
+
     .logo-box img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
-      will-change:transform, filter;
+      animation: logoFloat 3.1s ease-in-out infinite;
+      position:relative;
+      z-index:1;
     }
 
-    /* NEW: logo animation */
-    .logo-anim img{
-      animation: logoFloat 3.2s ease-in-out infinite;
-    }
-    .logo-anim::after{
+    .logo-box::after{
       content:"";
       position:absolute;
-      inset:-22%;
+      inset:-26%;
       background:conic-gradient(from 180deg,
         transparent 0%,
-        rgba(255,122,0,0.28) 18%,
+        rgba(255,122,0,0.30) 18%,
         transparent 38%,
         rgba(255,122,0,0.22) 58%,
         transparent 78%,
         rgba(255,122,0,0.18) 100%);
       animation: logoSpin 6.5s linear infinite;
-      opacity:.55;
+      opacity:.62;
       pointer-events:none;
       mix-blend-mode:screen;
     }
-    .logo-anim:hover img{
-      transform:scale(1.05);
-      filter:saturate(1.12) contrast(1.05);
-    }
+
     @keyframes logoFloat{
-      0%,100%{ transform:translateY(0); }
-      50%{ transform:translateY(-2px); }
+      0%,100%{
+        transform:translateY(0) scale(1);
+      }
+      50%{
+        transform:translateY(-3px) scale(1.025);
+      }
     }
+
     @keyframes logoSpin{
-      to{ transform:rotate(360deg); }
-    }
-    @media (prefers-reduced-motion: reduce){
-      .logo-anim img,
-      .logo-anim::after{
-        animation:none !important;
+      to{
+        transform:rotate(360deg);
       }
     }
 
@@ -115,19 +185,44 @@
       display:flex;
       flex-wrap:wrap;
       gap:16px;
-      font-size:.85rem;
+      font-size:.82rem;
       text-transform:uppercase;
       letter-spacing:.16em;
       color:var(--muted);
       justify-content:flex-end;
     }
-    .nav a:hover{color:var(--brand);}
+
+    .nav a{
+      position:relative;
+      padding:8px 0;
+      transition:color .18s ease;
+    }
+
+    .nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:2px;
+      width:0;
+      height:2px;
+      background:var(--brand);
+      transition:width .22s ease;
+      border-radius:999px;
+    }
+
+    .nav a:hover{
+      color:var(--brand);
+    }
+
+    .nav a:hover::after{
+      width:100%;
+    }
 
     .btn{
       appearance:none;
       border-radius:999px;
-      padding:9px 16px;
-      font-weight:700;
+      padding:10px 17px;
+      font-weight:800;
       font-size:.9rem;
       border:1px solid var(--border);
       background:#101010;
@@ -135,111 +230,342 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:6px;
+      gap:7px;
       cursor:pointer;
       white-space:nowrap;
-      transition:border-color .12s ease,box-shadow .12s ease,transform .12s ease;
-    }
-    .btn:hover{
-      border-color:var(--brand);
-      box-shadow:0 6px 24px rgba(255,122,0,0.3);
-      transform:translateY(-1px);
-    }
-    .btn.primary{
-      background:var(--brand);
-      color:#111;
-      border-color:transparent;
+      transition:
+        border-color .18s ease,
+        box-shadow .18s ease,
+        transform .18s ease,
+        background .18s ease;
     }
 
-    /* HERO */
-    .hero{
-      margin-top:14px;
-      border-radius:26px;
+    .btn:hover{
+      border-color:var(--brand);
+      box-shadow:0 8px 28px rgba(255,122,0,0.32);
+      transform:translateY(-2px);
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand-light));
+      color:#111;
+      border-color:transparent;
+      box-shadow:0 10px 30px rgba(255,122,0,0.24);
+    }
+
+    .btn.primary:hover{
+      box-shadow:0 14px 42px rgba(255,122,0,0.42);
+    }
+
+    /* GRAND OPENING HERO */
+    .grand-hero{
+      margin-top:18px;
+      border-radius:32px;
       border:1px solid var(--border);
       background:
-        linear-gradient(135deg,rgba(255,122,0,0.18),rgba(255,122,0,0.02)),
-        #060606;
-      padding:clamp(24px,5vw,40px);
+        linear-gradient(135deg,rgba(255,122,0,0.24),rgba(255,122,0,0.03) 44%,rgba(255,255,255,0.04)),
+        #050505;
+      padding:clamp(24px,5vw,48px);
       display:grid;
-      grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
-      gap:clamp(18px,4vw,40px);
+      grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+      gap:clamp(22px,4vw,44px);
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 26px 80px rgba(0,0,0,0.62);
+      isolation:isolate;
     }
+
+    .grand-hero::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(520px 300px at 78% 18%,rgba(255,122,0,0.28),transparent 64%),
+        radial-gradient(420px 260px at 20% 85%,rgba(255,255,255,0.06),transparent 60%);
+      pointer-events:none;
+      z-index:-1;
+      animation: heroPulse 4s ease-in-out infinite;
+    }
+
+    .grand-hero::after{
+      content:"";
+      position:absolute;
+      top:-40%;
+      left:-20%;
+      width:36%;
+      height:180%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);
+      transform:rotate(18deg);
+      animation: shineSweep 6s ease-in-out infinite;
+      pointer-events:none;
+    }
+
+    @keyframes heroPulse{
+      0%,100%{
+        opacity:.78;
+      }
+      50%{
+        opacity:1;
+      }
+    }
+
+    @keyframes shineSweep{
+      0%,35%{
+        transform:translateX(-160%) rotate(18deg);
+      }
+      70%,100%{
+        transform:translateX(420%) rotate(18deg);
+      }
+    }
+
     .hero-kicker{
       text-transform:uppercase;
-      letter-spacing:.2em;
+      letter-spacing:.22em;
       font-size:.76rem;
-      font-weight:800;
+      font-weight:900;
       color:var(--brand);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border:1px solid rgba(255,122,0,0.34);
+      border-radius:999px;
+      background:rgba(255,122,0,0.08);
+      animation: fadeUp .7s ease both;
     }
-    .hero h1{
-      margin:12px 0 6px;
-      font-size:clamp(2.1rem,4.5vw,3.3rem);
-      line-height:1.02;
+
+    .hero-kicker::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--brand);
+      box-shadow:0 0 16px var(--brand);
+      animation: dotBlink 1.6s ease-in-out infinite;
     }
-    .hero h1 span{color:var(--brand);}
-    .hero p{
+
+    @keyframes dotBlink{
+      0%,100%{
+        opacity:.45;
+        transform:scale(.8);
+      }
+      50%{
+        opacity:1;
+        transform:scale(1.12);
+      }
+    }
+
+    .grand-hero h1{
+      margin:18px 0 10px;
+      font-size:clamp(2.55rem,6vw,5.15rem);
+      line-height:.94;
+      letter-spacing:-.06em;
+      animation: fadeUp .75s ease .08s both;
+    }
+
+    .grand-hero h1 span{
+      color:var(--brand);
+      text-shadow:0 0 30px rgba(255,122,0,0.36);
+    }
+
+    .grand-copy{
       margin:0;
       color:var(--muted);
-      font-size:.98rem;
-      max-width:36rem;
+      font-size:clamp(.98rem,1.45vw,1.1rem);
+      max-width:40rem;
+      line-height:1.62;
+      animation: fadeUp .75s ease .16s both;
     }
+
+    .offer-box{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      animation: fadeUp .75s ease .24s both;
+    }
+
+    .offer-chip{
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(0,0,0,0.32);
+      border-radius:18px;
+      padding:13px 14px;
+      transition:transform .18s ease,border-color .18s ease,background .18s ease;
+    }
+
+    .offer-chip:hover{
+      transform:translateY(-4px);
+      border-color:rgba(255,122,0,0.5);
+      background:rgba(255,122,0,0.08);
+    }
+
+    .offer-chip strong{
+      display:block;
+      font-size:1.06rem;
+      color:#fff;
+    }
+
+    .offer-chip span{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
     .hero-ctas{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:18px;
+      margin-top:22px;
+      animation: fadeUp .75s ease .32s both;
     }
+
     .hero-note{
-      margin-top:10px;
-      font-size:.84rem;
+      margin-top:13px;
+      font-size:.86rem;
       color:var(--muted);
+      animation: fadeUp .75s ease .4s both;
     }
-    .hero-right{
+
+    .hero-note strong{
+      color:var(--brand);
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(18px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .grand-visual{
+      min-height:440px;
       display:flex;
       align-items:center;
       justify-content:center;
-    }
-    .hero-card{
-      width:100%;
-      max-width:360px;
-      background:var(--card);
-      border-radius:24px;
-      border:1px solid var(--border);
-      box-shadow:0 14px 40px rgba(0,0,0,0.8);
-      padding:16px 16px 18px;
-      display:grid;
-      gap:12px;
-    }
-    .hero-card-tag{
-      font-size:.78rem;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--muted);
-    }
-    .hero-card-title{
-      font-weight:800;
-      font-size:1.02rem;
-    }
-    .hero-card-body{
-      font-size:.86rem;
-      color:var(--muted);
+      position:relative;
     }
 
-    /* hero photo for Twist Bowl (SIZE INCREASED) */
-    .hero-photo{
-      margin-top:6px;
+    .grand-card{
       width:100%;
-      height:220px;
-      border-radius:20px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background:#050505;
+      max-width:470px;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,0.16);
+      background:rgba(10,10,10,0.72);
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.78),
+        0 0 52px rgba(255,122,0,0.16);
+      padding:14px;
+      position:relative;
+      animation: cardFloat 4.2s ease-in-out infinite;
     }
-    .hero-photo img{
+
+    @keyframes cardFloat{
+      0%,100%{
+        transform:translateY(0) rotate(0deg);
+      }
+      50%{
+        transform:translateY(-9px) rotate(.7deg);
+      }
+    }
+
+    .grand-img{
+      height:390px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.14);
+      background:#040404;
+    }
+
+    .grand-img img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
+      transition:transform .5s ease,filter .5s ease;
+    }
+
+    .grand-card:hover .grand-img img{
+      transform:scale(1.08);
+      filter:saturate(1.12) contrast(1.06);
+    }
+
+    .free-badge{
+      position:absolute;
+      top:-18px;
+      right:-12px;
+      width:128px;
+      height:128px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--brand),#ffd39a);
+      color:#121212;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      font-weight:950;
+      text-transform:uppercase;
+      line-height:1;
+      box-shadow:0 18px 38px rgba(255,122,0,0.45);
+      animation: badgeBounce 2.6s ease-in-out infinite;
+      border:4px solid rgba(0,0,0,0.55);
+    }
+
+    .free-badge span{
+      display:block;
+      font-size:.78rem;
+      letter-spacing:.06em;
+    }
+
+    .free-badge b{
+      display:block;
+      font-size:1.5rem;
+      letter-spacing:-.04em;
+      margin-top:4px;
+    }
+
+    @keyframes badgeBounce{
+      0%,100%{
+        transform:rotate(7deg) scale(1);
+      }
+      50%{
+        transform:rotate(2deg) scale(1.06);
+      }
+    }
+
+    .date-card{
+      position:absolute;
+      left:-8px;
+      bottom:22px;
+      max-width:230px;
+      border-radius:20px;
+      background:rgba(0,0,0,0.80);
+      border:1px solid rgba(255,255,255,0.15);
+      padding:14px 15px;
+      backdrop-filter:blur(12px);
+      box-shadow:0 16px 38px rgba(0,0,0,0.5);
+      animation: fadeUp .85s ease .34s both;
+    }
+
+    .date-card strong{
+      display:block;
+      color:var(--brand);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.76rem;
+      margin-bottom:5px;
+    }
+
+    .date-card span{
+      color:#fff;
+      font-weight:750;
+      font-size:.94rem;
     }
 
     /* RIBBON */
@@ -247,7 +573,7 @@
       margin-top:18px;
       border-radius:999px;
       border:1px dashed var(--brand);
-      padding:10px 16px;
+      padding:11px 16px;
       display:flex;
       gap:10px;
       align-items:center;
@@ -255,45 +581,70 @@
       font-size:.86rem;
       text-transform:uppercase;
       letter-spacing:.18em;
-      font-weight:700;
-      background:#050505;
+      font-weight:800;
+      background:rgba(5,5,5,0.92);
+      overflow:hidden;
+      position:relative;
     }
-    .ribbon span{color:var(--brand);}
+
+    .ribbon::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,transparent,rgba(255,122,0,0.12),transparent);
+      animation:ribbonGlow 3.8s ease-in-out infinite;
+    }
+
+    @keyframes ribbonGlow{
+      0%{
+        transform:translateX(-100%);
+      }
+      100%{
+        transform:translateX(100%);
+      }
+    }
+
+    .ribbon span{
+      color:var(--brand);
+      position:relative;
+      z-index:1;
+    }
+
+    .ribbon em{
+      font-style:normal;
+      position:relative;
+      z-index:1;
+    }
 
     /* SECTIONS */
     .section{
-      margin-top:clamp(30px,5vw,44px);
+      margin-top:clamp(34px,5vw,52px);
     }
+
     .section h2{
-      font-size:1.1rem;
+      font-size:1.12rem;
       text-transform:uppercase;
-      letter-spacing:.2em;
-      margin-bottom:10px;
+      letter-spacing:.22em;
+      margin:0 0 10px;
     }
+
     .section-sub{
       color:var(--muted);
-      font-size:.9rem;
-      margin-bottom:18px;
+      font-size:.92rem;
+      margin:0 0 20px;
+      line-height:1.55;
     }
 
     /* MENU GRID */
     .grid{
       display:grid;
       grid-template-columns:repeat(6,minmax(0,1fr));
-      gap:14px;
-    }
-    @media (max-width:1100px){
-      .hero{grid-template-columns:minmax(0,1fr);}
-      .hero-right{order:-1;}
-      .grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-    }
-    @media (max-width:720px){
-      .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+      gap:15px;
     }
 
     .card{
-      background:var(--card);
-      border-radius:18px;
+      background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015));
+      border-radius:20px;
       border:1px solid var(--border);
       padding:12px 12px 16px;
       min-height:150px;
@@ -301,313 +652,682 @@
       flex-direction:column;
       gap:8px;
       overflow:hidden;
+      position:relative;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease,
+        background .22s ease;
     }
 
-    /* image for each menu card (SIZE INCREASED) */
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(240px 120px at 50% 0%,rgba(255,122,0,0.12),transparent 70%);
+      opacity:0;
+      transition:opacity .22s ease;
+      pointer-events:none;
+    }
+
+    .card:hover{
+      transform:translateY(-8px) scale(1.015);
+      border-color:rgba(255,122,0,0.42);
+      box-shadow:0 18px 42px rgba(0,0,0,0.55),0 0 22px rgba(255,122,0,0.12);
+      background:linear-gradient(180deg,rgba(255,122,0,0.08),rgba(255,255,255,0.02));
+    }
+
+    .card:hover::before{
+      opacity:1;
+    }
+
     .card-img{
       width:100%;
-      height:140px;
-      border-radius:14px;
+      height:142px;
+      border-radius:15px;
       overflow:hidden;
       border:1px solid var(--border);
       background:#050505;
       margin-bottom:4px;
+      position:relative;
+      z-index:1;
     }
+
     .card-img img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
+      transition:transform .45s ease,filter .45s ease;
+    }
+
+    .card:hover .card-img img{
+      transform:scale(1.11);
+      filter:saturate(1.12) contrast(1.06);
     }
 
     .card-label{
-      font-size:.8rem;
+      font-size:.76rem;
       text-transform:uppercase;
       letter-spacing:.16em;
       color:var(--muted);
+      position:relative;
+      z-index:1;
     }
+
     .card-title{
-      font-weight:900;
-      font-size:1.02rem;
+      font-weight:950;
+      font-size:1.04rem;
+      position:relative;
+      z-index:1;
     }
+
     .card-body{
       font-size:.86rem;
       color:var(--muted);
+      line-height:1.48;
+      position:relative;
+      z-index:1;
+      margin:0;
     }
 
     /* FEATURE STRIP */
     .feature-strip{
       display:grid;
       grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
-      gap:18px;
-      background:linear-gradient(135deg,#111,#070707);
-      border-radius:22px;
+      gap:20px;
+      background:
+        linear-gradient(135deg,rgba(255,122,0,0.10),transparent 42%),
+        linear-gradient(135deg,#111,#070707);
+      border-radius:24px;
       border:1px solid var(--border);
-      padding:18px 18px 20px;
+      padding:20px;
       margin-top:18px;
+      overflow:hidden;
+      position:relative;
     }
+
+    .feature-strip::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      top:-90px;
+      width:220px;
+      height:220px;
+      background:rgba(255,122,0,0.16);
+      border-radius:999px;
+      filter:blur(44px);
+      pointer-events:none;
+    }
+
     .feature-tag{
       font-size:.78rem;
       text-transform:uppercase;
       letter-spacing:.18em;
       color:var(--brand);
-    }
-    .feature-title{
-      font-weight:800;
-      font-size:1.08rem;
-      margin-top:6px;
-    }
-    .feature-body{
-      font-size:.86rem;
-      color:var(--muted);
-      margin-top:6px;
+      font-weight:850;
     }
 
-    /* featured image box (SIZE INCREASED) */
+    .feature-title{
+      font-weight:900;
+      font-size:clamp(1.15rem,2.2vw,1.55rem);
+      margin-top:8px;
+      line-height:1.2;
+    }
+
+    .feature-body{
+      font-size:.9rem;
+      color:var(--muted);
+      margin-top:9px;
+      line-height:1.58;
+      max-width:45rem;
+    }
+
     .feature-img{
-      border-radius:18px;
+      border-radius:20px;
       overflow:hidden;
       border:1px solid var(--border);
       background:#040404;
-      min-height:260px;
+      min-height:270px;
+      position:relative;
+      z-index:1;
     }
+
     .feature-img img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
+      transition:transform .5s ease;
     }
 
-    /* HIRING FOOTER */
-    footer{
-      margin:40px 0 24px;
+    .feature-strip:hover .feature-img img{
+      transform:scale(1.07);
     }
-    .hiring{
-      border-radius:20px;
-      border:1px solid var(--border);
-      background:#050505;
-      padding:18px 18px 16px;
+
+    /* HIRING */
+    .hiring-panel{
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,0.14);
+      background:
+        radial-gradient(500px 240px at 20% 0%,rgba(255,122,0,0.20),transparent 65%),
+        linear-gradient(135deg,#101010,#050505);
+      padding:clamp(20px,4vw,34px);
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);
+      gap:24px;
+      align-items:center;
+      box-shadow:0 24px 60px rgba(0,0,0,0.56);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hiring-panel::before{
+      content:"WE ARE HIRING";
+      position:absolute;
+      right:-24px;
+      bottom:-7px;
+      font-size:clamp(2.6rem,7vw,6rem);
+      font-weight:950;
+      letter-spacing:-.06em;
+      color:rgba(255,255,255,0.035);
+      pointer-events:none;
+      white-space:nowrap;
+    }
+
+    .hiring-kicker{
+      color:var(--brand);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:900;
+      font-size:.8rem;
+      margin-bottom:10px;
+    }
+
+    .hiring-title{
+      font-size:clamp(1.7rem,4vw,3rem);
+      line-height:1;
+      letter-spacing:-.05em;
+      font-weight:950;
+      margin:0;
+    }
+
+    .hiring-sub{
+      margin-top:12px;
+      color:var(--muted);
+      line-height:1.62;
+      max-width:44rem;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .contact-card{
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(0,0,0,0.28);
+      border-radius:18px;
+      padding:14px;
+      transition:transform .18s ease,border-color .18s ease;
+      position:relative;
+      z-index:1;
+    }
+
+    .contact-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(255,122,0,0.44);
+    }
+
+    .contact-card span{
+      display:block;
+      color:var(--brand);
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:850;
+      margin-bottom:6px;
+    }
+
+    .contact-card a{
+      font-weight:850;
+      word-break:break-word;
+    }
+
+    .role-list{
+      display:grid;
+      gap:10px;
+      position:relative;
+      z-index:1;
+    }
+
+    .role-pill{
+      border-radius:999px;
+      border:1px solid rgba(255,122,0,0.28);
+      padding:10px 14px;
+      background:rgba(255,122,0,0.08);
+      color:#fff;
+      font-weight:800;
       display:flex;
-      flex-wrap:wrap;
-      gap:14px;
       align-items:center;
       justify-content:space-between;
-    }
-    .hiring-title{
-      font-size:1.05rem;
-      font-weight:800;
-    }
-    .hiring-sub{
-      font-size:.9rem;
-      color:var(--muted);
+      gap:10px;
+      transition:transform .18s ease,background .18s ease;
     }
 
-    /* hiring photo (SIZE INCREASED) */
-    .hiring-photo{
-      width:min(360px,100%);
-      height:190px;
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background:#040404;
+    .role-pill:hover{
+      transform:translateX(6px);
+      background:rgba(255,122,0,0.14);
     }
-    .hiring-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+
+    .role-pill::after{
+      content:"Apply";
+      color:var(--brand);
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    footer{
+      margin:24px 0 20px;
     }
 
     .foot-note{
-      margin-top:10px;
-      font-size:.8rem;
+      margin-top:16px;
+      font-size:.82rem;
       color:var(--muted);
+      text-align:center;
     }
 
-    @media (max-width:640px){
-      .topbar{flex-direction:column;align-items:flex-start;}
-      .hiring{align-items:flex-start;}
+    /* RESPONSIVE */
+    @media (max-width:1100px){
+      .grand-hero{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .grand-visual{
+        min-height:auto;
+      }
+
+      .grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+      }
+
+      .feature-strip,
+      .hiring-panel{
+        grid-template-columns:minmax(0,1fr);
+      }
+    }
+
+    @media (max-width:760px){
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        position:relative;
+      }
+
+      .nav{
+        justify-content:flex-start;
+        gap:12px;
+        font-size:.78rem;
+      }
+
+      .offer-box{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .grand-img{
+        height:315px;
+      }
+
+      .free-badge{
+        width:104px;
+        height:104px;
+        right:-6px;
+        top:-14px;
+      }
+
+      .free-badge b{
+        font-size:1.2rem;
+      }
+
+      .date-card{
+        left:10px;
+        bottom:12px;
+      }
+
+      .contact-grid{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .ribbon{
+        border-radius:18px;
+        flex-wrap:wrap;
+        text-align:center;
+        line-height:1.5;
+      }
+    }
+
+    @media (max-width:520px){
+      .wrap{
+        padding:14px;
+      }
+
+      .grand-hero{
+        border-radius:24px;
+        padding:20px;
+      }
+
+      .grand-hero h1{
+        font-size:2.55rem;
+      }
+
+      .grid{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .card-img{
+        height:190px;
+      }
+
+      .grand-img{
+        height:285px;
+      }
+
+      .hero-ctas .btn{
+        width:100%;
+      }
+
+      .feature-strip,
+      .hiring-panel{
+        border-radius:22px;
+        padding:18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *,
+      *::before,
+      *::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+    <div class="floating-glow one"></div>
+    <div class="floating-glow two"></div>
+
     <!-- HEADER -->
     <header class="topbar">
       <div class="brand">
-        <!-- UPDATED: added class logo-anim for animation -->
-        <div class="logo-box logo-anim">
+        <div class="logo-box">
           <img src="logo.jpg" alt="Taco’s Twist logo">
         </div>
         <span>Taco’s&nbsp;Twist</span>
       </div>
 
       <nav class="nav">
+        <a href="#grand-opening">Grand Opening</a>
         <a href="#menu">Menu</a>
         <a href="#featured">Catering</a>
         <a href="#hiring">We’re Hiring</a>
       </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- GRAND OPENING HERO -->
+    <section id="grand-opening" class="grand-hero" aria-labelledby="hero-title">
       <div>
-        <div class="hero-kicker">Launching soon</div>
-        <h1 id="hero-title">Fresh Mexican flavors with a bold <span>twist.</span></h1>
-        <p>
-          Build-your-own bowls, burritos, tacos and more. Big flavor, fast service,
-          and signature Taco’s Twist sauces made to crave.
+        <div class="hero-kicker">Grand Opening Coming Soon</div>
+
+        <h1 id="hero-title">
+          Free Chicken Bowls for Our <span>Grand Opening.</span>
+        </h1>
+
+        <p class="grand-copy">
+          Taco’s Twist is bringing bold Mexican flavors, fresh toppings, signature sauces,
+          and crave-worthy bowls to the community. Come hungry, bring your friends, and
+          stay tuned for the official opening date and time.
         </p>
+
+        <div class="offer-box" aria-label="Grand opening offer highlights">
+          <div class="offer-chip">
+            <strong>Free Bowls</strong>
+            <span>Opening Special</span>
+          </div>
+
+          <div class="offer-chip">
+            <strong>Chicken Included</strong>
+            <span>Fresh & Flavorful</span>
+          </div>
+
+          <div class="offer-chip">
+            <strong>Limited Time</strong>
+            <span>Stay Tuned</span>
+          </div>
+        </div>
 
         <div class="hero-ctas">
           <a class="btn primary"
-             href="mailto:hello@tacostwistusa.com?subject=Keep%20me%20posted&body=Hi%2C%20please%20add%20me%20to%20the%20Taco%E2%80%99s%20Twist%20launch%20list.">
-            Get launch updates
+             href="mailto:hello@tacostwistusa.com?subject=Grand%20Opening%20Updates&body=Hi%2C%20please%20send%20me%20Taco%E2%80%99s%20Twist%20grand%20opening%20updates.">
+            Get Opening Updates
           </a>
-          <a class="btn" href="#menu">Preview the menu</a>
+
+          <a class="btn" href="#menu">Preview the Menu</a>
+
+          <a class="btn" href="#hiring">Join Our Team</a>
         </div>
 
         <p class="hero-note">
-          <strong style="color:var(--brand);">Coming soon – stay tuned.</strong>
-          Follow our journey from test kitchen to grand opening.
+          <strong>Free bowl offer:</strong> available during grand opening promotion.
+          Date and time will be announced soon.
         </p>
       </div>
 
-      <div class="hero-right" aria-hidden="true">
-        <div class="hero-card">
-          <div>
-            <div class="hero-card-tag">Signature Feature</div>
-            <div class="hero-card-title">Twist Bowl</div>
-            <p class="hero-card-body">
-              Cilantro-lime rice, smoky chicken, roasted corn, crunchy toppings and a cool
-              avocado ranch finish. Just one of many twists we’re crafting for opening day.
-            </p>
+      <div class="grand-visual" aria-label="Grand opening free chicken bowl">
+        <div class="grand-card">
+          <div class="free-badge">
+            <div>
+              <span>Get a</span>
+              <b>Free Bowl</b>
+            </div>
           </div>
 
-          <div class="hero-photo">
-            <img src="twist.jpg" alt="Twist Bowl photo">
+          <div class="grand-img">
+            <img src="grand.jpg" alt="Free chicken burrito bowl for Taco’s Twist grand opening">
+          </div>
+
+          <div class="date-card">
+            <strong>Opening Soon</strong>
+            <span>Stay tuned for date &amp; time</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMING SOON RIBBON -->
+    <!-- GRAND OPENING RIBBON -->
     <div class="ribbon" role="status" aria-live="polite">
-      <span>Coming soon</span> • Stay tuned for opening date &amp; location
+      <span>Grand Opening</span>
+      <em>• Free chicken bowls • Fresh Mexican flavors • Stay tuned</em>
     </div>
 
     <!-- MENU PREVIEW -->
     <section id="menu" class="section" aria-labelledby="menu-title">
       <h2 id="menu-title">Menu Preview</h2>
+
       <p class="section-sub">
         The full menu unlocks at launch, but here’s a taste of what you’ll be able to build at Taco’s Twist.
       </p>
 
       <div class="grid">
         <article class="card">
-          <div class="card-img"><img src="build-your-own.jpg" alt="Build-Your-Own"></div>
+          <div class="card-img">
+            <img src="build-your-own.jpg" alt="Build-Your-Own">
+          </div>
           <div class="card-label">Digital + In-Store</div>
           <div class="card-title">Build-Your-Own</div>
-          <p class="card-body">Pick your base, protein, toppings and signature twist sauce. Your bowl, your rules.</p>
+          <p class="card-body">
+            Pick your base, protein, toppings and signature twist sauce. Your bowl, your rules.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="burrito.jpg" alt="Burrito"></div>
+          <div class="card-img">
+            <img src="burrito.jpg" alt="Burrito">
+          </div>
           <div class="card-label">Classic</div>
           <div class="card-title">Burrito</div>
-          <p class="card-body">Soft flour tortilla packed tight with rice, beans, protein and all the extras.</p>
+          <p class="card-body">
+            Soft flour tortilla packed tight with rice, beans, protein and all the extras.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="burrito-bowl.jpg" alt="Burrito Bowl"></div>
+          <div class="card-img">
+            <img src="burrito-bowl.jpg" alt="Burrito Bowl">
+          </div>
           <div class="card-label">Crowd Favorite</div>
           <div class="card-title">Burrito Bowl</div>
-          <p class="card-body">All the burrito goodness, no wrap. More room for toppings and drizzle.</p>
+          <p class="card-body">
+            All the burrito goodness, no wrap. More room for toppings and drizzle.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="salad.jpg" alt="Salad"></div>
+          <div class="card-img">
+            <img src="salad.jpg" alt="Salad">
+          </div>
           <div class="card-label">Greens</div>
           <div class="card-title">Salad</div>
-          <p class="card-body">Crisp greens topped with warm proteins and bright citrus-chili dressing.</p>
+          <p class="card-body">
+            Crisp greens topped with warm proteins and bright citrus-chili dressing.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="lifestyle-bowls.jpg" alt="Lifestyle Bowls"></div>
+          <div class="card-img">
+            <img src="lifestyle-bowls.jpg" alt="Lifestyle Bowls">
+          </div>
           <div class="card-label">Lifestyle</div>
           <div class="card-title">Lifestyle Bowls</div>
-          <p class="card-body">Higher-protein, veggie-forward and other curated bowls ready in one tap.</p>
+          <p class="card-body">
+            Higher-protein, veggie-forward and other curated bowls ready in one tap.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="quesadillas.jpg" alt="Quesadillas"></div>
+          <div class="card-img">
+            <img src="quesadillas.jpg" alt="Quesadillas">
+          </div>
           <div class="card-label">Cheesy</div>
           <div class="card-title">Quesadillas</div>
-          <p class="card-body">Golden, melted and sliced. Served with trio of dips and house salsas.</p>
+          <p class="card-body">
+            Golden, melted and sliced. Served with trio of dips and house salsas.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="tacos.jpg" alt="Tacos"></div>
+          <div class="card-img">
+            <img src="tacos.jpg" alt="Tacos">
+          </div>
           <div class="card-label">Street-Style</div>
           <div class="card-title">Tacos</div>
-          <p class="card-body">Soft or crunchy shells, stacked with fillings and finished with your twist.</p>
+          <p class="card-body">
+            Soft or crunchy shells, stacked with fillings and finished with your twist.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="kids-meals.jpg" alt="Kid’s Meals"></div>
+          <div class="card-img">
+            <img src="kids-meals.jpg" alt="Kid’s Meals">
+          </div>
           <div class="card-label">For Little Foodies</div>
           <div class="card-title">Kid’s Meals</div>
-          <p class="card-body">Smaller mains, sides and a drink – customisable but kid-approved.</p>
+          <p class="card-body">
+            Smaller mains, sides and a drink — customizable but kid-approved.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="chips-salsa.jpg" alt="Chips &amp; Sides"></div>
+          <div class="card-img">
+            <img src="chips-salsa.jpg" alt="Chips &amp; Sides">
+          </div>
           <div class="card-label">Shareables</div>
           <div class="card-title">Chips &amp; Sides</div>
-          <p class="card-body">Warm chips, guac, queso and salsa flights made for dipping and sharing.</p>
+          <p class="card-body">
+            Warm chips, guac, queso and salsa flights made for dipping and sharing.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="desserts.jpg" alt="Desserts"></div>
+          <div class="card-img">
+            <img src="desserts.jpg" alt="Desserts">
+          </div>
           <div class="card-label">Sweet Finish</div>
           <div class="card-title">Desserts</div>
-          <p class="card-body">Crispy, cinnamon and chocolatey bites to close out your meal.</p>
+          <p class="card-body">
+            Crispy, cinnamon and chocolatey bites to close out your meal.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="drinks.jpg" alt="Drinks"></div>
+          <div class="card-img">
+            <img src="drinks.jpg" alt="Drinks">
+          </div>
           <div class="card-label">Refresh</div>
           <div class="card-title">Drinks</div>
-          <p class="card-body">Aguas frescas, sodas and cold brew to pair with every bite.</p>
+          <p class="card-body">
+            Aguas frescas, sodas and cold brew to pair with every bite.
+          </p>
         </article>
 
         <article class="card">
-          <div class="card-img"><img src="birria.jpg" alt="Birria"></div>
+          <div class="card-img">
+            <img src="birria.jpg" alt="Birria">
+          </div>
           <div class="card-label">Beef/Chicken</div>
           <div class="card-title">Birria</div>
-          <p class="card-body">Traditional Birria Tacos with original flavours.</p>
+          <p class="card-body">
+            Traditional birria tacos with rich, original flavors.
+          </p>
         </article>
       </div>
     </section>
 
-    <!-- Catering -->
+    <!-- CATERING -->
     <section id="featured" class="section" aria-labelledby="featured-title">
-      <h2 id="featured-title">Catering for all Events</h2>
+      <h2 id="featured-title">Catering for All Events</h2>
+
       <p class="section-sub">
-        We Do Catering for All EVENTS for offices, parties and Enjoy Real Mexican Flavors.
+        We do catering for offices, parties, celebrations, and special events with real Mexican flavor.
       </p>
 
       <div class="feature-strip">
         <div>
           <div class="feature-tag">Catering</div>
-          <div class="feature-title">From office lunches to celebrations—let Taco’s Twist handle the flavor.</div>
+
+          <div class="feature-title">
+            From office lunches to celebrations — let Taco’s Twist handle the flavor.
+          </div>
+
           <p class="feature-body">
-            Flame-seared carne asada with smoky red chimichurri, citrus lime, and fresh cilantro—
-            order it by the tray or enjoy it in burritos, bowls, and tacos for groups of any size.
+            Flame-seared meats, fresh toppings, rice, beans, salsas, queso, guac, and signature sauces.
+            Order it by the tray or enjoy it in burritos, bowls, tacos, and group-friendly catering packages.
           </p>
-          <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;">
-            <span class="btn primary">Coming soon</span>
-            <a href="#menu" class="btn">See how it fits the menu</a>
+
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;">
+            <span class="btn primary">Coming Soon</span>
+            <a href="#hiring" class="btn">Join Our Team</a>
           </div>
         </div>
 
@@ -617,18 +1337,48 @@
       </div>
     </section>
 
-    <!-- HIRING -->
-    <footer id="hiring" class="section">
-      <div class="hiring">
+    <!-- WE ARE HIRING -->
+    <section id="hiring" class="section" aria-labelledby="hiring-title">
+      <div class="hiring-panel">
         <div>
-          <div class="hiring-title">We’re hiring – build Taco’s Twist with us.</div>
-          <div class="hiring-sub">
-            Looking for energetic people for crew, line, prep, cashier and shift lead roles.
-            Flexible schedules, fast-paced team and lots of flavor----- WILL CONNECT SOON.
-          </div>
+          <div class="hiring-kicker">We Are Hiring</div>
 
+          <h2 id="hiring-title" class="hiring-title">
+            Build Taco’s Twist with us.
+          </h2>
+
+          <p class="hiring-sub">
+            We are looking for energetic, reliable, and friendly team members for crew,
+            line, prep, cashier, and shift lead roles. If you love fast-paced restaurant
+            work and great customer service, reach out to us.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <span>Call / Text</span>
+              <a href="tel:9592787900">959-278-7900</a>
+            </div>
+
+            <div class="contact-card">
+              <span>Email</span>
+              <a href="mailto:tacostwisthiring@gmail.com">tacostwisthiring@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="role-list" aria-label="Hiring roles">
+          <div class="role-pill">Crew Members</div>
+          <div class="role-pill">Line Staff</div>
+          <div class="role-pill">Prep Team</div>
+          <div class="role-pill">Cashiers</div>
+          <div class="role-pill">Shift Leads</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
       <p class="foot-note">
-        © Taco’s Twist. All rights reserved. Coming soon — stay tuned.
+        © Taco’s Twist. All rights reserved. Grand opening coming soon — stay tuned.
       </p>
     </footer>
   </div>
