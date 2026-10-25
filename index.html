@@ -3,106 +3,2445 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080706">
+  <meta name="theme-color" content="#0b0b09">
+
   <title>Taco’s Twist | Order Mexican Food in New Haven</title>
-  <meta name="description" content="Order fresh bowls, burritos, tacos, birria, quesadillas and more from Taco’s Twist in New Haven through Clover.">
+
+  <meta
+    name="description"
+    content="Order bowls, burritos, tacos, birria, loaded nachos and more from Taco’s Twist in New Haven. Open daily from 10:30 AM to 2:00 AM."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
-    :root{--bg:#080706;--panel:#12100e;--panel2:#1a1714;--white:#fff;--muted:#c9c0b6;--orange:#ff7a00;--gold:#ffb347;--red:#e6332a;--line:rgba(255,255,255,.12);--shadow:0 24px 60px rgba(0,0,0,.42)}
-    *{box-sizing:border-box;font-family:"Alice",serif}html{scroll-behavior:smooth}body{margin:0;background:#080706;color:var(--white);font-family:"Alice",serif;overflow-x:hidden;isolation:isolate}body::before{content:"";position:fixed;inset:0;z-index:-2;background:url("site-background.jpg") center/cover no-repeat;filter:saturate(.85) contrast(1.08);transform:scale(1.03)}body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,7,6,.96) 0%,rgba(8,7,6,.88) 35%,rgba(8,7,6,.93) 100%),radial-gradient(circle at 15% 45%,rgba(255,122,0,.19),transparent 28%),radial-gradient(circle at 90% 78%,rgba(255,122,0,.12),transparent 26%)}body.modal-open{overflow:hidden}a{color:inherit;text-decoration:none}img,video{display:block;width:100%}.container{width:min(1180px,calc(100% - 32px));margin:auto}
-    .offer-strip{background:linear-gradient(90deg,#ff6500,#ff9b21);color:#160b02;text-align:center;padding:9px 16px;font:700 .9rem/1.25 "Alice",serif;letter-spacing:.02em}.offer-strip strong{font-weight:900}.offer-strip a{text-decoration:underline;text-underline-offset:3px}
-    .topbar{position:sticky;top:0;z-index:20;background:rgba(8,7,6,.76);border-bottom:1px solid rgba(255,122,0,.18);backdrop-filter:blur(20px);box-shadow:0 10px 40px rgba(0,0,0,.18)}
-    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase}.brand img{width:54px;height:54px;border-radius:16px;object-fit:cover;border:2px solid var(--orange)}.links{display:flex;align-items:center;gap:8px}.links a{padding:10px 12px;color:#ddd;font-size:.82rem}.links .order{background:var(--orange);color:#111;border-radius:999px;font-weight:700}
-    .hero{padding:0 0 20px}.hero-full{position:relative;min-height:clamp(610px,78vh,820px);display:flex;align-items:center;overflow:hidden;background:#100b08}.hero-video{position:absolute;inset:0;height:100%;object-fit:cover;transform:scale(1.04);transition:transform .25s ease-out}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,4,3,.94) 0%,rgba(5,4,3,.73) 38%,rgba(5,4,3,.26) 70%,rgba(5,4,3,.48) 100%),linear-gradient(0deg,rgba(5,4,3,.78),transparent 45%)}.hero-glow{position:absolute;width:440px;height:440px;right:-120px;top:-150px;border-radius:50%;background:rgba(255,122,0,.28);filter:blur(80px);pointer-events:none;animation:glowDrift 7s ease-in-out infinite alternate}.hero-content{position:relative;z-index:2;padding:86px 0 110px}.hero-copy{max-width:760px}.label,.section-label{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,122,0,.14);border:1px solid rgba(255,122,0,.35);color:var(--gold);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em}h1{font-size:clamp(3.5rem,8vw,7.2rem);line-height:.86;letter-spacing:-.06em;margin:22px 0 20px;text-wrap:balance}h1 span,h2 span{color:var(--orange)}.lead{color:#e4ddd5;font-size:1.14rem;line-height:1.65;max-width:660px;text-shadow:0 2px 20px rgba(0,0,0,.7)}.hero-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.hero-points span{padding:9px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;color:#fff;background:rgba(0,0,0,.38);font:600 .82rem/1.1 "Alice",serif;backdrop-filter:blur(10px)}.hero-location{position:absolute;z-index:3;right:max(16px,calc((100vw - 1180px)/2));bottom:42px;max-width:330px;padding:16px 19px;border-radius:20px;background:rgba(8,7,6,.76);border:1px solid rgba(255,179,71,.4);backdrop-filter:blur(14px);box-shadow:0 18px 44px rgba(0,0,0,.32);animation:floatCard 4.5s ease-in-out infinite}.hero-location small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}.hero-location strong{font-size:1.15rem}.flavor-ribbon{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;gap:34px;justify-content:center;white-space:nowrap;overflow:hidden;padding:13px 20px;background:rgba(255,122,0,.92);color:#160b02;border-top:1px solid rgba(255,255,255,.32);font-size:.84rem;letter-spacing:.12em;text-transform:uppercase}.flavor-ribbon span::before{content:"✦";margin-right:34px}@keyframes glowDrift{to{transform:translate(-90px,80px) scale(1.24);opacity:.64}}@keyframes floatCard{50%{transform:translateY(-7px)}}
-    .order-options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.order-btn{position:relative;overflow:hidden;min-height:70px;padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:#211c17;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.05rem;font-weight:700;transition:transform .28s,border-color .28s,box-shadow .28s}.order-btn::after{content:"";position:absolute;inset:-70% auto -70% -30%;width:26%;background:rgba(255,255,255,.3);transform:rotate(22deg) translateX(-260%);transition:transform .55s}.order-btn:hover{transform:translateY(-5px) scale(1.015);border-color:var(--orange);box-shadow:0 16px 34px rgba(0,0,0,.32)}.order-btn:hover::after{transform:rotate(22deg) translateX(620%)}.order-btn.clover{background:linear-gradient(135deg,#62bd4a,#318b32)}.order-btn.uber{background:#fff;color:#111}.order-btn.dash{background:#ff3008}
-    section{padding:76px 0 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}h2{font-size:clamp(2.2rem,5vw,4.4rem);line-height:.95;letter-spacing:-.055em;margin:12px 0 0}.section-head p{max-width:470px;color:var(--muted);line-height:1.55;margin:0}.section-head::after{content:"";position:absolute}.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.is-visible{opacity:1;transform:none}
-    .menu-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.menu-card{display:block;overflow:hidden;border-radius:24px;background:linear-gradient(160deg,rgba(31,26,22,.9),rgba(12,10,9,.84));border:1px solid rgba(255,255,255,.13);box-shadow:0 20px 48px rgba(0,0,0,.22);backdrop-filter:blur(16px);transition:transform .32s,border-color .32s,box-shadow .32s}.menu-card:hover{transform:translateY(-9px);border-color:rgba(255,122,0,.72);box-shadow:0 24px 54px rgba(0,0,0,.38),0 0 0 1px rgba(255,122,0,.12)}.menu-card img{height:205px;object-fit:cover;background:#211d19;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s}.menu-card:hover img{transform:scale(1.075);filter:saturate(1.12)}.menu-copy{position:relative;padding:17px}.menu-copy::before{content:"";position:absolute;left:17px;top:0;width:42px;height:2px;background:linear-gradient(90deg,var(--orange),var(--gold))}.menu-copy small{color:var(--gold);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.menu-copy h3{font-size:1.25rem;margin:6px 0}.menu-copy p{color:var(--muted);font-size:.86rem;line-height:1.4;margin:0}
-    .wide-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:clamp(24px,4vw,44px);border:1px solid rgba(255,179,71,.25);border-radius:32px;background:linear-gradient(135deg,rgba(255,122,0,.17),rgba(10,8,7,.76) 52%),rgba(18,16,14,.76);backdrop-filter:blur(18px);box-shadow:var(--shadow)}.wide-card::before{content:"";position:absolute;width:260px;height:260px;left:-90px;bottom:-150px;border-radius:50%;background:rgba(255,122,0,.24);filter:blur(50px)}.wide-card>*{position:relative;z-index:1}.wide-card h3{font-size:clamp(2rem,4vw,3.6rem);line-height:1;margin:14px 0}.wide-card p{color:var(--muted);line-height:1.65}.wide-card img{height:330px;object-fit:cover;border-radius:24px;box-shadow:0 22px 48px rgba(0,0,0,.34);transition:transform .5s}.wide-card:hover img{transform:scale(1.025) rotate(.35deg)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;border:1px solid var(--line);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;transition:transform .25s,box-shadow .25s}.btn:hover{transform:translateY(-3px)}.btn.primary{background:linear-gradient(135deg,var(--orange),var(--gold));color:#111;border-color:var(--orange);box-shadow:0 10px 28px rgba(255,122,0,.2)}
-    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.review-card{position:relative;min-height:230px;padding:26px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(155deg,rgba(31,26,22,.94),rgba(10,8,7,.88));box-shadow:0 20px 48px rgba(0,0,0,.25);transition:transform .3s,border-color .3s,box-shadow .3s}.review-card:hover{transform:translateY(-7px);border-color:rgba(255,122,0,.7);box-shadow:0 24px 54px rgba(0,0,0,.38)}.stars{color:var(--gold);font-size:1.15rem;letter-spacing:.15em}.review-card h3{font-size:1.35rem;margin:18px 0 10px}.review-card p{color:var(--muted);font-size:1rem;line-height:1.6;margin:0}.review-type{display:block;margin-top:20px;color:var(--orange);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.contact a{padding:16px;border-radius:16px;background:rgba(0,0,0,.28);border:1px solid var(--line)}.contact small{display:block;color:var(--gold);margin-bottom:5px}footer{padding:46px 0 30px;text-align:center;color:#928a82;font-size:.86rem}
-    .delivery-modal[hidden]{display:none}.delivery-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px}.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.76);backdrop-filter:blur(8px)}.modal-card{position:relative;width:min(470px,100%);padding:34px;border-radius:28px;border:1px solid rgba(255,179,71,.42);background:radial-gradient(circle at 100% 0,rgba(255,122,0,.25),transparent 34%),#15110e;box-shadow:0 30px 90px rgba(0,0,0,.68);text-align:center}.modal-icon{width:68px;height:68px;margin:0 auto 16px;display:grid;place-items:center;border-radius:22px;background:var(--orange);color:#160b02;font:900 1.55rem/1 "Alice",serif}.modal-card h2{font-size:clamp(2.25rem,8vw,3.65rem);margin:0 0 12px}.modal-card p{color:var(--muted);font:400 1rem/1.55 "Alice",serif;margin:0 auto 22px;max-width:370px}.modal-card .btn{width:100%;font-weight:800}.modal-note{display:block;margin-top:12px;color:#988f86;font:400 .75rem/1.35 "Alice",serif}.modal-close{position:absolute;top:13px;right:13px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#211c17;color:#fff;font-size:1.35rem;cursor:pointer}.modal-close:hover,.modal-close:focus-visible{border-color:var(--orange);outline:none}
-    @media(max-width:980px){.wide-card{grid-template-columns:1fr}.menu-grid{grid-template-columns:repeat(3,1fr)}.reviews-grid{grid-template-columns:1fr 1fr}.hero-content{padding-top:70px}.hero-location{left:16px;right:auto;bottom:56px}}
-    @media(max-width:700px){.container{width:min(100% - 22px,1180px)}.nav{min-height:66px}.brand img{width:46px;height:46px}.brand span{font-size:.9rem}.links a:not(.order){display:none}.hero-full{min-height:760px}.hero-content{padding:52px 0 190px}h1{font-size:3.55rem}.lead{font-size:1rem}.order-options{grid-template-columns:1fr;gap:9px}.order-btn{min-height:58px}.hero-location{bottom:58px;max-width:calc(100% - 32px)}.flavor-ribbon{justify-content:flex-start;gap:26px;font-size:.76rem}.flavor-ribbon span::before{margin-right:26px}section{padding-top:48px}.section-head{display:block}.section-head p{margin-top:12px}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.menu-card{border-radius:16px}.menu-card img{height:132px}.menu-copy{padding:11px}.menu-copy h3{font-size:1rem;margin:5px 0}.menu-copy p{font-size:.75rem;line-height:1.28;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.wide-card{padding:20px;border-radius:24px}.wide-card img{height:260px}.reviews-grid{grid-template-columns:1fr}.review-card{min-height:auto}.contact{grid-template-columns:1fr}.modal-card{padding:30px 20px 24px;border-radius:24px}}
-    @media(max-width:370px){.menu-card img{height:112px}.menu-copy p{display:none}h1{font-size:2.75rem}}
-    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}.hero-video{transform:none!important}}
+    :root {
+      --bg: #0b0b09;
+      --panel: #151310;
+      --white: #f8f6ef;
+      --muted: #aaa59e;
+      --orange: #ff790b;
+      --line: #42291b;
+      --depth-shadow: 0 22px 48px #0008;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      padding-bottom: 100px;
+      background:
+        radial-gradient(
+          ellipse at 0% 22%,
+          #49220f33,
+          transparent 36%
+        ),
+        radial-gradient(
+          ellipse at 100% 70%,
+          #31114b22,
+          transparent 40%
+        ),
+        var(--bg);
+      color: var(--white);
+      font: 15px/1.7 "Alice", Georgia, serif;
+    }
+
+    body::before {
+      content: "";
+      display: none;
+      background-image: url("site-background.jpg");
+    }
+
+    body.menu-open,
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img,
+    video {
+      display: block;
+      width: 100%;
+    }
+
+    button,
+    a,
+    summary {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1100px, 86%);
+      margin: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Alice", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      margin: 18px 0 24px;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.08;
+    }
+
+    h2 {
+      margin: 12px 0 25px;
+      font-size: clamp(31px, 4vw, 47px);
+      line-height: 1.12;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    h1 span,
+    h2 span {
+      color: var(--orange);
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .fine {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 15px;
+      z-index: 210;
+      padding: 12px;
+      background: var(--orange);
+      color: #111;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* Halloween announcement */
+
+    .halloween-banner {
+      position: relative;
+      padding: 12px 20px;
+      border-bottom: 1px solid #633416;
+      background: #1b100b;
+      color: #ffb46b;
+      box-shadow:
+        inset 0 -2px 0 #100906,
+        0 3px 14px #0005;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .halloween-banner span {
+      color: #fff3df;
+    }
+
+    .halloween-banner a {
+      display: inline-block;
+    }
+
+    .halloween-banner a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .pumpkin-mark {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 25px;
+      margin: 0 10px;
+      vertical-align: middle;
+      border-radius: 44% 44% 46% 46%;
+      background:
+        radial-gradient(
+          ellipse at 50% 45%,
+          #ffb44a,
+          #f76b05 70%
+        );
+      box-shadow:
+        inset 5px 0 0 #cc5007,
+        inset -5px 0 0 #a33d05,
+        2px 4px 0 #0005,
+        0 0 14px #ff790b33;
+    }
+
+    .pumpkin-mark::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 11px;
+      width: 4px;
+      height: 7px;
+      border-radius: 2px;
+      background: #77743b;
+      transform: rotate(15deg);
+    }
+
+    .pumpkin-mark::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 6px;
+      width: 4px;
+      height: 4px;
+      background: #3a1909;
+      box-shadow:
+        8px 0 #3a1909,
+        4px 7px #3a1909;
+    }
+
+    /* Navigation */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid #6f3717;
+      background: rgba(4, 5, 3, 0.95);
+      box-shadow: 0 8px 28px #0005;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+    }
+
+    .brand img {
+      width: 59px;
+      height: 59px;
+      border-radius: 50%;
+      object-fit: contain;
+      box-shadow:
+        0 0 0 3px #16110b,
+        0 0 0 4px #f7791640,
+        0 7px 18px #0009;
+    }
+
+    .brand span {
+      display: none;
+    }
+
+    .nav-toggle {
+      position: relative;
+      z-index: 70;
+      display: block;
+      padding: 10px;
+      border: 0;
+      background: transparent;
+      color: #e3e1d9;
+      font-size: 25px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .links {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: none;
+      padding: 130px max(7%, calc((100vw - 1100px) / 2));
+      overflow: auto;
+      background: #020401;
+    }
+
+    .links.open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 27px;
+    }
+
+    .links a {
+      font-size: 31px;
+      line-height: 1.2;
+    }
+
+    .links a:hover {
+      color: var(--orange);
+    }
+
+    .links .order {
+      width: min(400px, 100%);
+      margin-top: 12px;
+      padding: 18px 28px;
+      border-radius: 6px;
+      background: var(--orange);
+      color: #111;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .menu-open .brand {
+      visibility: hidden;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 0;
+    }
+
+    .hero-full {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 740px;
+      overflow: hidden;
+      isolation: isolate;
+      perspective: 1200px;
+      background: linear-gradient(135deg, #23170d, #090906);
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 4, 2, 0.85),
+          rgba(7, 4, 2, 0.35)
+        ),
+        linear-gradient(
+          0deg,
+          rgba(44, 19, 7, 0.6),
+          transparent 70%
+        );
+    }
+
+    .hero-full::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(
+          ellipse at 78% 30%,
+          #ff790b22,
+          transparent 48%
+        ),
+        linear-gradient(
+          0deg,
+          #090906,
+          transparent 28%
+        );
+    }
+
+    .hero-full::after {
+      content: "";
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      z-index: -1;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          #ff790b22,
+          transparent 70%
+        );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 85px 0;
+      transform: translateZ(0);
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      transform-style: preserve-3d;
+    }
+
+    .hero-copy h1 {
+      text-shadow:
+        0 2px 0 #362414,
+        0 5px 0 #1e150d,
+        0 15px 35px #000b;
+    }
+
+    .hero-copy h1 span {
+      color: #ff882b;
+      text-shadow:
+        0 2px 0 #a94708,
+        0 4px 0 #713006,
+        0 8px 20px #0009,
+        0 0 45px #ff790b25;
+    }
+
+    .label,
+    .section-label {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background: var(--orange);
+      color: #17110a;
+      box-shadow:
+        0 4px 0 #8a3905,
+        0 10px 22px #0006;
+      transform: rotate(-1.5deg);
+    }
+
+    .section-label {
+      color: #ff9a49;
+    }
+
+    .lead {
+      max-width: 530px;
+      color: #ded9d1;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .hero-bogo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      max-width: 100%;
+      margin: 0 0 24px;
+      padding: 15px 22px;
+      border: 1px solid #ff9b45;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3b1d0ee8, #16110de8);
+      box-shadow:
+        0 5px 0 #10090388,
+        0 12px 25px #0005;
+      scroll-margin-top: 100px;
+    }
+
+    .hero-bogo span {
+      color: #ffd7ae;
+      font-size: 13px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .hero-bogo strong {
+      color: #ff9438;
+      font-size: clamp(25px, 3vw, 38px);
+      font-weight: 400;
+      line-height: 1.18;
+    }
+
+    .hero-bogo:hover {
+      border-color: #ffd4a8;
+      background: #3b210f;
+    }
+
+    .hero-bogo:focus-visible {
+      outline: 3px solid #fff3df;
+      outline-offset: 5px;
+    }
+
+    /* Decorative 3D Halloween accents */
+
+    .hero-depth-art {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+      perspective: 1000px;
+      pointer-events: none;
+    }
+
+    .depth-ring {
+      position: absolute;
+      top: 16%;
+      right: 8%;
+      width: 320px;
+      height: 320px;
+      border: 1px solid #ffb16c42;
+      border-radius: 50%;
+      box-shadow:
+        inset 0 0 35px #ff790b12,
+        0 0 40px #ff790b12;
+      transform: rotateY(-28deg) rotateX(18deg);
+    }
+
+    .depth-ring::before,
+    .depth-ring::after {
+      content: "";
+      position: absolute;
+      inset: 24px;
+      border: 1px solid #ffb16c30;
+      border-radius: 50%;
+    }
+
+    .depth-ring::after {
+      inset: 55px;
+      border-style: dashed;
+    }
+
+    .depth-pumpkin {
+      position: absolute;
+      right: 11%;
+      bottom: 19%;
+      width: 134px;
+      height: 113px;
+      border-radius: 43% 43% 46% 46%;
+      background:
+        radial-gradient(
+          ellipse at 32% 25%,
+          #ffc06d,
+          #f47a15 40%,
+          #9d350b 83%
+        );
+      box-shadow:
+        inset 18px 0 14px #7c290a55,
+        inset -18px 0 13px #62210770,
+        12px 24px 25px #0008;
+      transform: rotate(-9deg);
+    }
+
+    .depth-pumpkin::before {
+      content: "";
+      position: absolute;
+      top: -22px;
+      left: 64px;
+      width: 15px;
+      height: 28px;
+      border-radius: 6px 4px 0 0;
+      background: linear-gradient(90deg, #3a3c16, #8a8341, #3b3f19);
+      transform: rotate(14deg);
+    }
+
+    .depth-pumpkin::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 40px;
+      width: 53px;
+      height: 109px;
+      border-left: 2px solid #ffb45166;
+      border-right: 3px solid #80300b50;
+      border-radius: 50%;
+    }
+
+    .depth-pumpkin.small {
+      right: 5%;
+      bottom: 15%;
+      width: 90px;
+      height: 77px;
+      filter: brightness(0.8);
+      transform: rotate(13deg);
+    }
+
+    .depth-pumpkin.small::before {
+      top: -15px;
+      left: 42px;
+      width: 10px;
+      height: 20px;
+    }
+
+    .depth-pumpkin.small::after {
+      left: 26px;
+      width: 38px;
+      height: 74px;
+    }
+
+    /* Buttons */
+
+    .order-options,
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn,
+    .order-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 24px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: transparent;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .btn:hover {
+      border-color: var(--orange);
+    }
+
+    .btn.primary,
+    .order-btn,
+    .sticky-order {
+      border: 1px solid #ffb76b;
+      background: linear-gradient(160deg, #ff9a32, #f46707);
+      color: #111;
+      box-shadow:
+        0 5px 0 #893303,
+        0 12px 25px #0005;
+      transform: translateY(0);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn.primary:hover,
+    .order-btn:hover,
+    .sticky-order:hover {
+      background: linear-gradient(160deg, #ffb054, #ff790b);
+      box-shadow:
+        0 7px 0 #893303,
+        0 16px 28px #0006;
+      transform: translateY(-2px);
+    }
+
+    .btn.primary:active,
+    .order-btn:active,
+    .sticky-order:active {
+      box-shadow:
+        0 2px 0 #893303,
+        0 5px 10px #0005;
+      transform: translateY(3px);
+    }
+
+    /* Sections */
+
+    section {
+      padding: 72px 0 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 28px;
+    }
+
+    .section-head p {
+      max-width: 430px;
+      margin: 0;
+    }
+
+    .text-split {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 65px;
+    }
+
+    .text-split p {
+      margin: 0 0 20px;
+    }
+
+    /* 3D menu cards */
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 30px;
+      perspective: 1500px;
+    }
+
+    .menu-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      isolation: isolate;
+      border: 1px solid #39291e;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #262018, #13110e);
+      box-shadow:
+        0 6px 0 #070706,
+        0 7px 0 #65402066,
+        var(--depth-shadow);
+      transform:
+        perspective(1000px)
+        rotateX(var(--tilt-x, 0deg))
+        rotateY(var(--tilt-y, 0deg));
+      transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+    }
+
+    .menu-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      border-radius: inherit;
+      background:
+        radial-gradient(
+          circle at var(--shine-x, 50%) var(--shine-y, 15%),
+          #fff4,
+          transparent 48%
+        );
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .menu-card:hover {
+      border-color: #ff994c;
+      box-shadow:
+        0 8px 0 #0b0805,
+        0 9px 0 #ff790b55,
+        0 32px 60px #000a;
+    }
+
+    .menu-card:hover::after {
+      opacity: 0.3;
+    }
+
+    .menu-card img {
+      height: auto;
+      aspect-ratio: 1.45;
+      object-fit: cover;
+      border-bottom: 1px solid #ff982c22;
+      background: #211b13;
+    }
+
+    .menu-copy {
+      padding: 21px;
+      background: linear-gradient(140deg, #221c15, #12100e);
+    }
+
+    .menu-copy h3 {
+      margin: 0 0 8px;
+      color: #fff3df;
+      font-size: 25px;
+      text-shadow: 0 3px 6px #0007;
+    }
+
+    .menu-copy p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* Catering, offers and reviews */
+
+    .wide-card,
+    .value-card,
+    .review-card {
+      position: relative;
+      border: 1px solid #64402077;
+      border-radius: 16px;
+      background: linear-gradient(140deg, #2a1c13, #12110e 70%);
+      box-shadow:
+        0 5px 0 #090806,
+        0 6px 0 #4d322344,
+        0 22px 42px #0006;
+    }
+
+    .wide-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+      padding: 30px;
+    }
+
+    .wide-card h3 {
+      margin: 15px 0;
+      font-size: 38px;
+    }
+
+    .wide-card p {
+      line-height: 1.7;
+    }
+
+    .wide-card img {
+      height: 330px;
+      border: 1px solid #d488402a;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow:
+        7px 10px 0 #08070566,
+        0 20px 35px #0007;
+      transform: perspective(1000px) rotateY(-5deg);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .value-card,
+    .review-card {
+      padding: 27px;
+    }
+
+    .value-card::before {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 4px;
+      margin-bottom: 24px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #ff790b, #ffc98c);
+      box-shadow:
+        0 3px 0 #733c13,
+        0 0 18px #ff790b55;
+    }
+
+    .value-card h3 {
+      margin-top: 13px;
+      font-size: 32px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review-card h3 {
+      margin: 17px 0;
+      font-size: 26px;
+    }
+
+    .review-card p {
+      font-size: 14px;
+    }
+
+    .stars {
+      color: var(--orange);
+      letter-spacing: 3px;
+    }
+
+    .review-type {
+      color: var(--orange);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Location */
+
+    .location-map {
+      display: block;
+      width: 100%;
+      height: 250px;
+      margin: 22px 0 28px;
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+      box-shadow:
+        0 8px 0 #27180e,
+        0 22px 40px #0007;
+    }
+
+    .hours-table {
+      width: 100%;
+      padding: 12px 18px;
+      border: 1px solid #49301d;
+      border-radius: 10px;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #11100b;
+    }
+
+    .hours-table caption {
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .hours-table th,
+    .hours-table td {
+      padding: 7px 0;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .hours-table th {
+      color: #ece9e2;
+      font-weight: 700;
+    }
+
+    .hours-table td {
+      color: var(--muted);
+      text-align: right;
+      font-weight: 400;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 850px;
+    }
+
+    details {
+      padding: 25px 18px;
+      border-bottom: 1px solid var(--line);
+      border-left: 2px solid transparent;
+      background: linear-gradient(90deg, #19140e88, transparent);
+    }
+
+    details[open] {
+      border-left-color: var(--orange);
+      background: linear-gradient(90deg, #30201299, #12100b);
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      list-style: none;
+      cursor: pointer;
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--orange);
+      font-size: 26px;
+    }
+
+    details[open] summary::after {
+      content: "×";
+    }
+
+    details p {
+      margin: 22px 0 0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 75px;
+      padding: 45px 0 30px;
+      border-top: 1px solid #593319;
+      background: #030402;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-logo {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 30px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px #ff790b25);
+    }
+
+    footer .btn {
+      margin-bottom: 17px;
+    }
+
+    .footer-address {
+      line-height: 1.9;
+    }
+
+    .footer-phone {
+      color: var(--orange);
+    }
+
+    .footer-copy {
+      margin-top: 30px;
+      color: #746f67;
+      font-size: 11px;
+    }
+
+    /* Fixed order button */
+
+    .sticky-order-wrap {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 45;
+      padding:
+        12px
+        max(4%, calc((100vw - 1100px) / 2))
+        calc(17px + env(safe-area-inset-bottom));
+      border-top: 1px solid #211d15;
+      background: rgba(7, 8, 5, 0.97);
+      box-shadow: 0 -10px 35px #0005;
+    }
+
+    .sticky-order {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 53px;
+      padding: 13px;
+      border-radius: 6px;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Delivery offer dialog */
+
+    .offer-strip {
+      display: none;
+    }
+
+    .delivery-modal[hidden] {
+      display: none;
+    }
+
+    .delivery-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-card {
+      position: relative;
+      max-width: 440px;
+      padding: 40px 28px;
+      border: 1px solid #6c3c17;
+      border-radius: 8px;
+      background: #151310;
+      text-align: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 35px;
+      height: 35px;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .modal-icon {
+      margin-bottom: 15px;
+      color: var(--orange);
+      font-size: 30px;
+    }
+
+    .modal-card h2 {
+      font-size: 46px;
+    }
+
+    .modal-note {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .modal-card .btn {
+      width: 100%;
+    }
+
+    /* Desktop decorations */
+
+    @media (min-width: 1000px) {
+      .hero-depth-art {
+        left: 42%;
+      }
+
+      .depth-ring {
+        top: 20%;
+        right: 10%;
+      }
+
+      .depth-pumpkin {
+        right: 19%;
+      }
+
+      .depth-pumpkin.small {
+        right: 9%;
+      }
+    }
+
+    /* Tablet */
+
+    @media (max-width: 900px) {
+      .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .text-split {
+        gap: 35px;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide-card {
+        gap: 25px;
+      }
+
+      .wide-card img {
+        transform: none;
+      }
+
+      .hero-depth-art {
+        opacity: 0.45;
+      }
+
+      .depth-ring {
+        top: 30%;
+        right: -130px;
+        width: 290px;
+        height: 290px;
+      }
+
+      .depth-pumpkin {
+        right: 5%;
+        bottom: 8%;
+        width: 80px;
+        height: 68px;
+      }
+
+      .depth-pumpkin::before {
+        top: -13px;
+        left: 36px;
+        width: 9px;
+        height: 17px;
+      }
+
+      .depth-pumpkin::after {
+        left: 25px;
+        width: 32px;
+        height: 65px;
+      }
+
+      .depth-pumpkin.small {
+        display: none;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 650px) {
+      body {
+        font-size: 14px;
+      }
+
+      .container {
+        width: 84%;
+      }
+
+      .halloween-banner {
+        padding: 10px 8px;
+        font-size: 12px;
+        letter-spacing: 0;
+      }
+
+      .halloween-banner a {
+        font-size: 12px;
+      }
+
+      .halloween-banner .pumpkin-mark {
+        width: 18px;
+        height: 19px;
+        margin: 0 4px;
+      }
+
+      .nav {
+        width: 91%;
+        min-height: 68px;
+      }
+
+      .brand img {
+        width: 49px;
+        height: 49px;
+      }
+
+      .nav-toggle {
+        font-size: 23px;
+      }
+
+      .links {
+        padding: 120px 8% 50px;
+      }
+
+      .links.open {
+        gap: 31px;
+      }
+
+      .links a {
+        font-size: 29px;
+      }
+
+      .links .order {
+        width: 100%;
+        font-size: 21px;
+      }
+
+      .hero-full {
+        min-height: calc(100svh - 113px);
+      }
+
+      .hero-content {
+        padding: 55px 0 110px;
+      }
+
+      .hero-copy {
+        max-width: 380px;
+      }
+
+      h1 {
+        margin: 19px 0 23px;
+        font-size: 45px;
+      }
+
+      .hero-copy h1 {
+        text-shadow:
+          0 2px 0 #362414,
+          0 10px 25px #0009;
+      }
+
+      .label {
+        padding: 7px 10px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
+      }
+
+      .hero-bogo {
+        margin-bottom: 18px;
+        padding: 13px 17px;
+      }
+
+      .hero-bogo span {
+        font-size: 11px;
+      }
+
+      .hero-bogo strong {
+        font-size: 28px;
+      }
+
+      .lead {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .hero-depth-art {
+        opacity: 0.27;
+      }
+
+      .depth-ring {
+        top: 25%;
+        right: -185px;
+      }
+
+      .depth-pumpkin {
+        right: 8%;
+        bottom: 7%;
+      }
+
+      .order-options {
+        margin-top: 27px;
+      }
+
+      .order-btn,
+      .btn {
+        padding: 13px 24px;
+        font-size: 18px;
+      }
+
+      section {
+        padding-top: 58px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 18px;
+        font-size: 14px;
+      }
+
+      .section-head h2,
+      .text-split h2,
+      .faq-list h2 {
+        font-size: 33px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .menu-card {
+        border-radius: 12px;
+      }
+
+      .menu-card img {
+        aspect-ratio: 1.8;
+      }
+
+      .menu-copy {
+        padding: 18px 20px 22px;
+      }
+
+      .menu-copy h3 {
+        font-size: 24px;
+      }
+
+      .text-split,
+      .wide-card,
+      .value-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .wide-card,
+      .value-card,
+      .review-card {
+        border-radius: 12px;
+      }
+
+      .wide-card,
+      .value-card {
+        padding: 24px;
+      }
+
+      .wide-card h3,
+      .value-card h3 {
+        font-size: 29px;
+      }
+
+      .wide-card img {
+        height: 230px;
+        box-shadow: 0 10px 20px #0006;
+      }
+
+      .review-card {
+        padding: 23px;
+      }
+
+      #visit .text-split {
+        gap: 30px;
+      }
+
+      #visit h3 {
+        font-size: 30px;
+      }
+
+      .location-map {
+        height: 200px;
+      }
+
+      summary {
+        font-size: 21px;
+      }
+
+      .sticky-order-wrap {
+        padding-right: 4%;
+        padding-left: 4%;
+      }
+
+      footer .container {
+        width: 84%;
+      }
+
+      .modal-card h2 {
+        font-size: 37px;
+      }
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .menu-card {
+        transform: none !important;
+      }
+
+      .menu-card::after {
+        display: none;
+      }
+
+      .btn.primary:hover,
+      .order-btn:hover,
+      .sticky-order:hover {
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .menu-card,
+      .wide-card img,
+      .label,
+      .btn.primary,
+      .order-btn,
+      .sticky-order {
+        transform: none !important;
+      }
+
+      .menu-card::after {
+        display: none;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="offer-strip">Free delivery on orders over <strong>$50</strong> — <a href="#order">order now</a></div>
-  <header class="topbar"><div class="container nav"><a class="brand" href="#home"><img src="logo.jpg" alt="Taco’s Twist logo" width="54" height="54"><span>Taco’s Twist - The Mexican Spot</span></a><nav class="links" aria-label="Main navigation"><a href="#menu">Menu</a><a href="#catering">Catering</a><a class="order" href="#order">Order Now</a></nav></div></header>
-  <main>
-    <section class="hero" id="home"><div class="hero-full"><video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="pic.jpg" aria-label="Fresh Taco’s Twist food showcase"><source src="hero-video.mp4" type="video/mp4">Your browser does not support video.</video><div class="hero-overlay"></div><div class="hero-glow"></div><div class="container hero-content"><div class="hero-copy"><span class="label">• New Haven</span><h1>Your favorite, Authentic <span>Mexican food.</span></h1><p class="lead">Fresh bowls, loaded burritos, street-style tacos, birria, quesadillas and signature sauces—made your way and ready for pickup or delivery.</p><div class="hero-points" aria-label="Restaurant highlights"><span>Halal</span><span>Open late</span><span>Made fresh</span><span>10% student discount</span></div><div class="order-options" id="order"><a class="order-btn clover" href="https://tacostwistnewhaven.cloveronline.com/menu" target="_blank" rel="noopener">ORDER NOW</a></div></div></div><div class="hero-location"><small>Visit us today</small><strong>5 Grove Street, New Haven, CT Open Daily: 10:30 AM – 2:00 AM
-</strong></div><div class="flavor-ribbon" aria-hidden="true"><span>Birria favorites</span><span>Build your own</span><span>Fresh sauces</span><span>Open late</span></div></div></section>
-    <section id="menu"><div class="container"><div class="section-head"><div><span class="section-label">Order Through Clover</span><h2>Explore Our <span>Menu</span></h2></div><p>Our website categories now follow the Clover menu. Tap a section to see current items, choices and prices, then order online.</p></div><div class="menu-grid">
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Create%20Your%20Own" target="_blank" rel="noopener"><img src="build-your-own.jpg" alt="Create your own meal" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Customize it</small><h3>Create Your Own</h3><p>Burritos, bowls, tacos, salads and more—made your way.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Lifestyle%20Bowls" target="_blank" rel="noopener"><img src="lifestyle-bowls.jpg" alt="Lifestyle bowls" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Curated bowls</small><h3>Lifestyle Bowls</h3><p>Ready-to-order combinations with bold, balanced flavors.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Special%20Picks" target="_blank" rel="noopener"><img src="tacos.jpg" alt="Taco’s Twist special picks" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Guest favorites</small><h3>Special Picks</h3><p>Signature Taco’s Twist favorites selected for you.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Quesbirria%20%20Tacos" target="_blank" rel="noopener"><img src="birria.jpg" alt="Quesbirria tacos" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Beef or chicken</small><h3>Quesbirria Tacos</h3><p>Cheesy, crispy birria tacos packed with rich flavor.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Kids%20Special" target="_blank" rel="noopener"><img src="kids-meals.jpg" alt="Kids special" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Little foodies</small><h3>Kids Special</h3><p>Kid-friendly portions and easy family favorites.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Side%20%26%20Extra" target="_blank" rel="noopener"><img src="chips-salsa.jpg" alt="Sides and extras" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Add more</small><h3>Side &amp; Extra</h3><p>Chips, salsa, guac, queso and tasty extras.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Desserts" target="_blank" rel="noopener"><img src="desserts.jpg" alt="Desserts" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Sweet finish</small><h3>Desserts</h3><p>Finish your order with something sweet.</p></div></a>
-      <a class="menu-card" href="https://tacostwistnewhaven.cloveronline.com/menu/all#Drinks" target="_blank" rel="noopener"><img src="drinks.jpg" alt="Drinks" loading="lazy" width="400" height="260"><div class="menu-copy"><small>Refresh</small><h3>Drinks</h3><p>Cold drinks to pair with every Taco’s Twist meal.</p></div></a>
-    </div><div class="actions" style="justify-content:center"><a class="btn primary" href="https://tacostwistnewhaven.cloveronline.com/menu" target="_blank" rel="noopener">View Full Menu & Order</a></div></div></section>
-    <section id="catering"><div class="container"><div class="wide-card"><div><span class="section-label">Catering</span><h3>Bring Taco’s Twist to your next event.</h3><p>Office lunches, parties and celebrations made easy with trays, fresh toppings, proteins, salsas, queso, guac and group-friendly packages.</p><div class="actions"><a href="https://tacostwistnewhaven.cloveronline.com/menu/all" class="btn primary" target="_blank" rel="noopener">Order Catering Now</a><a href="https://tacostwistnewhaven.cloveronline.com/menu" class="btn" target="_blank" rel="noopener">View Menu</a></div></div><img src="catering.jpg" alt="Taco’s Twist catering" loading="lazy" width="600" height="420"></div></div></section>
-    <section id="reviews"><div class="container"><div class="section-head"><div><span class="section-label">Customer Favorites</span><h2>What New Haven <span>Loves</span></h2></div><p>Fresh ingredients, bold flavor and meals made exactly the way you want them.</p></div><div class="reviews-grid">
-      <article class="review-card"><div class="stars" aria-label="Five stars">★★★★★</div><h3>Birria worth coming back</h3><p>I got the birria chicken quesdilla it was so good it came with like 4 or 5 i dont remember, but it filled me up and it was so good and they're so nice and polite i never normally do reviews, but i definitely recommend this place.</p><span class="review-type">Jaydn</span></article>
-      <article class="review-card"><div class="stars" aria-label="Five stars">★★★★★</div><h3>Absolutely loved my visit to Taco's Twist. coming back!!! </h3><p>Highly recommend if you're looking for a delicious vegetarian meal. it was fresh and added the perfect tropical flavor that paired so well with the Tofu !!</p><span class="review-type">Syed Rizvi</span></article>
-      <article class="review-card"><div class="stars" aria-label="Five stars">★★★★★</div><h3>Exquisite Experience and Late Night Halal Spot</h3><p>First time trying Taco's Twist and food was phenomenal, and that's an understatement.Staff is super friendly and responsive and polite.</p><span class="review-type">Abdul</span></article>
-    </div></div></section>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="offer-strip">
+    Free delivery on orders over <strong>$50</strong> —
+    <a href="#order">order now</a>
+  </div>
+
+  <div class="halloween-banner">
+    <i class="pumpkin-mark" aria-hidden="true"></i>
+
+    <a href="#halloween-special">
+      <span>Halloween Special: Buy 1, Get 1 FREE!</span>
+      View Offer →
+    </a>
+
+    <i class="pumpkin-mark" aria-hidden="true"></i>
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img
+          src="logo.jpg"
+          alt="Taco’s Twist logo"
+          width="54"
+          height="54"
+        >
+        <span>Taco’s Twist - The Mexican Spot</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+      <nav
+        id="main-navigation"
+        class="links"
+        aria-label="Main navigation"
+      >
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#offers">Offers</a>
+        <a href="#faq">FAQ</a>
+        <a href="#visit">Visit</a>
+        <a class="order" href="#order">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+      <div class="hero-full">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="pic.jpg"
+          aria-label="Fresh Taco’s Twist food showcase"
+        >
+          <source src="hero-video.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-depth-art" aria-hidden="true">
+          <div class="depth-ring"></div>
+          <div class="depth-pumpkin"></div>
+          <div class="depth-pumpkin small"></div>
+        </div>
+
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <span class="label">New Haven · Grove Street</span>
+
+            <h1>
+              Buy 1,<br>
+              <span>Get 1 FREE!</span>
+            </h1>
+
+            <a
+              class="hero-bogo"
+              id="halloween-special"
+              href="#menu"
+            >
+              <span>Halloween Special</span>
+              <strong>Bowls and Burritos</strong>
+            </a>
+
+            <p class="lead">
+              Slow-cooked birria, loaded burritos, and build-your-own
+              bowls—your Mexican spot on Grove Street.
+              Delivered hot, your way.
+            </p>
+
+            <div class="order-options" id="order">
+              <a
+                class="order-btn"
+                href="https://tacostwistnewhaven.cloveronline.com/menu"
+                target="_blank"
+                rel="noopener"
+              >
+                ♨ &nbsp; ORDER ONLINE
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+      <div class="container text-split">
+        <div>
+          <span class="section-label">Our spot. Your favorites.</span>
+
+          <h2>
+            Welcome to<br>
+            <span>Taco’s Twist.</span>
+          </h2>
+        </div>
+
+        <div>
+          <p>
+            Your lunch break, dinner plans, and late-night cravings
+            all have a place here.
+          </p>
+
+          <p>
+            Located on Grove Street in New Haven, Taco’s Twist serves
+            bowls, burritos, tacos, birria, quesadillas, and signature
+            sauces. Choose your favorites, try a new combination,
+            and make your meal your own.
+          </p>
+
+          <p>
+            Stop by for a quick bite, pick up dinner, or order delivery
+            for a night in. We’re open every day from 10:30 AM
+            until 2:00 AM.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+
+    <section id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">Order Through Clover</span>
+            <h2>Explore Our <span>Menu</span></h2>
+          </div>
+
+          <p>
+            Find your next favorite—from build-your-own bowls to
+            cheesy birria tacos. Explore each category for current
+            choices and prices, then order online.
+          </p>
+        </div>
+
+        <div class="menu-grid">
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Create%20Your%20Own"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="build-your-own.jpg"
+              alt="Create your own meal"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Bowls</h3>
+              <p>
+                Your choice of rice, beans, protein, toppings,
+                and sauces—all in one satisfying bowl.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Lifestyle%20Bowls"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="lifestyle-bowls.jpg"
+              alt="Lifestyle bowls"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Burritos</h3>
+              <p>
+                Rice, beans, your favorite protein, toppings,
+                and sauces wrapped in a soft tortilla.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Special%20Picks"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="tacos.jpg"
+              alt="Taco’s Twist special picks"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Tacos</h3>
+              <p>
+                Pick your favorite fillings and toppings
+                for tacos made your way.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Quesbirria%20%20Tacos"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="birria.jpg"
+              alt="Quesbirria tacos"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Birria Tacos</h3>
+              <p>
+                Rich, savory birria tacos with your choice
+                of beef or chicken.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Kids%20Special"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="kids-meals.jpg"
+              alt="Kids special"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Kids Meals</h3>
+              <p>
+                Kid-friendly portions and simple favorites
+                for smaller appetites.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Side%20%26%20Extra"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="chips-salsa.jpg"
+              alt="Sides and extras"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Loaded Nachos</h3>
+              <p>
+                Crunchy tortilla chips piled with your
+                favorite savory toppings.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Desserts"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="desserts.jpg"
+              alt="Desserts"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Desserts</h3>
+              <p>Finish your meal with something sweet.</p>
+            </div>
+          </a>
+
+          <a
+            class="menu-card"
+            href="https://tacostwistnewhaven.cloveronline.com/menu/all#Drinks"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="drinks.jpg"
+              alt="Drinks"
+              loading="lazy"
+              width="400"
+              height="260"
+            >
+
+            <div class="menu-copy">
+              <h3>Drinks</h3>
+              <p>
+                Cold drinks to pair with your Taco’s Twist favorites.
+              </p>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="actions" style="justify-content:center">
+          <a
+            class="btn primary"
+            href="https://tacostwistnewhaven.cloveronline.com/menu"
+            target="_blank"
+            rel="noopener"
+          >
+            View Full Menu &amp; Order
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATERING -->
+
+    <section id="catering">
+      <div class="container">
+        <div class="wide-card">
+          <div>
+            <span class="section-label">Catering</span>
+
+            <h3>Bring Taco’s Twist to your next event.</h3>
+
+            <p>
+              We cater for all events—from birthdays and weddings
+              to office lunches, school events, family celebrations,
+              and community gatherings. Bring everyone together
+              with trays, fresh toppings, proteins, salsas, queso,
+              guac, and group-friendly packages. Let us help you
+              choose options for your guest count and budget.
+            </p>
+
+            <div class="actions">
+              <a
+                class="btn primary"
+                href="https://tacostwistnewhaven.cloveronline.com/menu/all"
+                target="_blank"
+                rel="noopener"
+              >
+                Order Catering Now
+              </a>
+
+              <a
+                class="btn"
+                href="https://tacostwistnewhaven.cloveronline.com/menu"
+                target="_blank"
+                rel="noopener"
+              >
+                View Menu
+              </a>
+            </div>
+          </div>
+
+          <img
+            src="catering.jpg"
+            alt="Taco’s Twist catering"
+            loading="lazy"
+            width="600"
+            height="420"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE TO ENJOY: NO DUPLICATE BOGO CARD -->
+
+    <section id="offers">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">More to enjoy</span>
+
+            <h2>
+              Great flavor.<br>
+              <span>Great value.</span>
+            </h2>
+          </div>
+
+          <p>
+            From everyday meals to group celebrations, find
+            something to satisfy your cravings and suit your budget.
+          </p>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card">
+            <span class="section-label">
+              For our student community
+            </span>
+
+            <h3>10% student discount.</h3>
+
+            <p>
+              Make your lunch break, study break, or after-class
+              meal even better. Enjoy our special student discount
+              on your Taco’s Twist favorites.
+            </p>
+
+            <p class="fine">
+              Ask our team about eligibility, applicable items,
+              and how to redeem the discount before ordering.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <span class="section-label">
+              Your favorites, delivered
+            </span>
+
+            <h3>Free delivery on orders over $50.</h3>
+
+            <p>
+              Ordering for yourself, sharing with friends, or
+              getting everyone’s favorites together? Enjoy great
+              value and free delivery on qualifying orders over $50.
+            </p>
+
+            <p class="fine">
+              Offer applies to qualifying delivery orders over $50.
+            </p>
+
+            <a class="btn primary" href="#order">
+              Explore Ordering Options
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">Customer Favorites</span>
+            <h2>What New Haven <span>Loves</span></h2>
+          </div>
+
+          <p>
+            Fresh ingredients, bold flavor and meals made
+            exactly the way you want them.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">★★★★★</div>
+
+            <h3>Birria worth coming back</h3>
+
+            <p>
+              I got the birria chicken quesdilla it was so good it
+              came with like 4 or 5 i dont remember, but it filled
+              me up and it was so good and they're so nice and
+              polite i never normally do reviews, but i definitely
+              recommend this place.
+            </p>
+
+            <span class="review-type">Jaydn</span>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">★★★★★</div>
+
+            <h3>
+              Absolutely loved my visit to Taco's Twist.
+              coming back!!!
+            </h3>
+
+            <p>
+              Highly recommend if you're looking for a delicious
+              vegetarian meal. it was fresh and added the perfect
+              tropical flavor that paired so well with the Tofu !!
+            </p>
+
+            <span class="review-type">Syed Rizvi</span>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="Five stars">★★★★★</div>
+
+            <h3>
+              Exquisite Experience and Late Night Halal Spot
+            </h3>
+
+            <p>
+              First time trying Taco's Twist and food was
+              phenomenal, and that's an understatement.Staff is
+              super friendly and responsive and polite.
+            </p>
+
+            <span class="review-type">Abdul</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+
+    <section id="visit">
+      <div class="container text-split">
+        <div>
+          <span class="section-label">Come hungry</span>
+
+          <h2>
+            Find your twist<br>
+            <span>on Grove Street.</span>
+          </h2>
+
+          <p style="margin-top:24px">
+            5 Grove Street<br>
+            New Haven, Connecticut
+          </p>
+
+          <p>
+            Join us for lunch, dinner, or a late-night bite.
+            Pickup and delivery are available through our
+            online ordering menu.
+          </p>
+
+          <a class="btn primary" href="#order">
+            Explore Ordering Options
+          </a>
+        </div>
+
+        <div>
+          <iframe
+            class="location-map"
+            title="Map of Taco’s Twist at 5 Grove Street, New Haven"
+            src="https://maps.google.com/maps?q=5%20Grove%20Street%20New%20Haven%20CT&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <h3>
+            Open <span style="color:var(--orange)">late</span>,
+            every day
+          </h3>
+
+          <table class="hours-table">
+            <caption class="fine">Restaurant opening hours</caption>
+
+            <tbody>
+              <tr>
+                <th scope="row">Monday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Tuesday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Wednesday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Thursday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Friday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Saturday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Sunday</th>
+                <td>10:30 AM–2:00 AM</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="fine">
+            Closing time is 2:00 AM the following morning.
+            Check Clover for available pickup and delivery times.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section id="faq">
+      <div class="container faq-list">
+        <span class="section-label">Good to know</span>
+        <h2>Good to <span>know</span></h2>
+
+        <details>
+          <summary>Can I customize my meal?</summary>
+          <p>
+            Yes. Explore Create Your Own for available meal styles,
+            proteins, toppings, and sauces. Choices and any extra
+            charges are shown on Clover.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you cater for events?</summary>
+          <p>
+            Yes! We offer catering for all events, including office
+            lunches, birthdays, weddings, school events, and family
+            celebrations. Explore our catering section and speak
+            with our team about your event, guest count, and budget.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you offer student discounts?</summary>
+          <p>
+            Yes, we offer a 10% student discount. Ask our team
+            about eligibility and redemption details before
+            placing your order.
+          </p>
+        </details>
+
+        <details>
+          <summary>How does the free delivery offer work?</summary>
+          <p>
+            Free delivery is available on qualifying delivery
+            orders over $50. Confirm the offer and any other
+            charges at checkout.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Where can I see current prices and delivery availability?
+          </summary>
+          <p>
+            Choose a menu category or use the ordering button to
+            visit Clover. Current prices, customization options,
+            delivery availability, and estimated times are shown
+            there.
+          </p>
+        </details>
+      </div>
+    </section>
+
   </main>
-  <footer><div class="container">© 2026 Taco’s Twist • 5 Grove Street, New Haven, Connecticut</div></footer>
-  <div class="delivery-modal" id="deliveryOffer" role="dialog" aria-modal="true" aria-labelledby="deliveryTitle" hidden>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      <img
+        class="footer-logo"
+        src="logo.jpg"
+        alt="Taco’s Twist logo"
+      >
+
+      <a
+        class="btn primary"
+        href="https://tacostwistnewhaven.cloveronline.com/menu"
+        target="_blank"
+        rel="noopener"
+      >
+        Order Online
+      </a>
+
+      <div class="footer-address">
+        5 Grove Street, New Haven, CT 06511<br>
+
+        <a class="footer-phone" href="tel:+12034147957">
+          (203) 414-7957
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Taco’s Twist. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FIXED ORDER BUTTON -->
+
+  <div class="sticky-order-wrap">
+    <a
+      class="sticky-order"
+      href="https://tacostwistnewhaven.cloveronline.com/menu"
+      target="_blank"
+      rel="noopener"
+    >
+      <span aria-hidden="true">♨</span>
+      Order Online
+    </a>
+  </div>
+
+  <!-- DELIVERY OFFER DIALOG -->
+
+  <div
+    class="delivery-modal"
+    id="deliveryOffer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="deliveryTitle"
+    hidden
+  >
     <div class="modal-backdrop" data-close-modal></div>
+
     <div class="modal-card">
-      <button class="modal-close" type="button" aria-label="Close offer" data-close-modal>×</button>
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close offer"
+        data-close-modal
+      >
+        ×
+      </button>
+
       <div class="modal-icon" aria-hidden="true">$50+</div>
       <span class="section-label">Online Special</span>
-      <h2 id="deliveryTitle">Delivery is <span>on us.</span></h2>
-      <p>Get free delivery when your order total is over $50. Build your favorites and order directly through Clover.</p>
-      <a class="btn primary" href="https://tacostwistnewhaven.cloveronline.com/menu" target="_blank" rel="noopener">Start Your Order</a>
-      <small class="modal-note">Offer applies to qualifying delivery orders over $50.</small>
+
+      <h2 id="deliveryTitle">
+        Delivery is <span>on us.</span>
+      </h2>
+
+      <p>
+        Get free delivery when your order total is over $50.
+        Build your favorites and order directly through Clover.
+      </p>
+
+      <a
+        class="btn primary"
+        href="https://tacostwistnewhaven.cloveronline.com/menu"
+        target="_blank"
+        rel="noopener"
+      >
+        Start Your Order
+      </a>
+
+      <small class="modal-note">
+        Offer applies to qualifying delivery orders over $50.
+      </small>
     </div>
   </div>
+
   <script>
+    /* Navigation and delivery dialog */
+
     (() => {
-      const modal = document.getElementById('deliveryOffer');
-      const closeButtons = modal.querySelectorAll('[data-close-modal]');
-      const close = () => { modal.hidden = true; document.body.classList.remove('modal-open'); };
-      const open = () => { modal.hidden = false; document.body.classList.add('modal-open'); modal.querySelector('.modal-close').focus(); };
-      window.setTimeout(open, 850);
-      closeButtons.forEach((button) => button.addEventListener('click', close));
-      document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hidden) close(); });
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".links");
 
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealItems = document.querySelectorAll('main > section:not(.hero), .menu-card, .wide-card');
-      revealItems.forEach((item) => item.classList.add('reveal'));
-      if (!reducedMotion && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        revealItems.forEach((item, index) => {
-          item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
-          observer.observe(item);
-        });
+      const closeNav = () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation");
+        toggle.textContent = "☰";
+        document.body.classList.remove("menu-open");
+      };
 
-        const hero = document.querySelector('.hero-full');
-        const heroVideo = document.querySelector('.hero-video');
-        hero.addEventListener('pointermove', (event) => {
-          const x = (event.clientX / window.innerWidth - .5) * 1.2;
-          const y = (event.clientY / window.innerHeight - .5) * 1.2;
-          heroVideo.style.transform = `scale(1.07) translate(${x}%, ${y}%)`;
+      toggle.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.textContent = open ? "×" : "☰";
+
+        toggle.setAttribute(
+          "aria-label",
+          open ? "Close navigation" : "Open navigation"
+        );
+
+        document.body.classList.toggle("menu-open", open);
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeNav);
+      });
+
+      const modal = document.getElementById("deliveryOffer");
+      let previousFocus;
+
+      const closeModal = () => {
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+
+        if (previousFocus && previousFocus.isConnected) {
+          previousFocus.focus();
+        }
+      };
+
+      const openModal = () => {
+        previousFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+        modal.querySelector(".modal-close").focus();
+      };
+
+      const offerLink = document.querySelector(".offer-strip a");
+
+      if (offerLink) {
+        offerLink.addEventListener("click", (event) => {
+          event.preventDefault();
+          openModal();
         });
-        hero.addEventListener('pointerleave', () => { heroVideo.style.transform = 'scale(1.04)'; });
-      } else {
-        revealItems.forEach((item) => item.classList.add('is-visible'));
       }
+
+      modal.querySelectorAll("[data-close-modal]").forEach((button) => {
+        button.addEventListener("click", closeModal);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          if (!modal.hidden) {
+            closeModal();
+          } else if (nav.classList.contains("open")) {
+            closeNav();
+            toggle.focus();
+          }
+        }
+
+        if (event.key === "Tab" && !modal.hidden) {
+          const items = modal.querySelectorAll("button, a[href]");
+          const first = items[0];
+          const last = items[items.length - 1];
+
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (
+            !event.shiftKey &&
+            document.activeElement === last
+          ) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+      });
+    })();
+
+    /* 3D menu-card tilt */
+
+    (() => {
+      const pointerQuery = window.matchMedia(
+        "(hover: hover) and (pointer: fine)"
+      );
+
+      const motionQuery = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+      const cards = [...document.querySelectorAll(".menu-card")];
+
+      const reset = (card) => {
+        card.style.removeProperty("--tilt-x");
+        card.style.removeProperty("--tilt-y");
+        card.style.removeProperty("--shine-x");
+        card.style.removeProperty("--shine-y");
+      };
+
+      cards.forEach((card) => {
+        let frame;
+
+        card.addEventListener("pointermove", (event) => {
+          if (!pointerQuery.matches || motionQuery.matches) {
+            return;
+          }
+
+          const box = card.getBoundingClientRect();
+
+          const x = Math.max(
+            0,
+            Math.min(1, (event.clientX - box.left) / box.width)
+          );
+
+          const y = Math.max(
+            0,
+            Math.min(1, (event.clientY - box.top) / box.height)
+          );
+
+          cancelAnimationFrame(frame);
+
+          frame = requestAnimationFrame(() => {
+            card.style.setProperty(
+              "--tilt-x",
+              ((0.5 - y) * 7).toFixed(2) + "deg"
+            );
+
+            card.style.setProperty(
+              "--tilt-y",
+              ((x - 0.5) * 9).toFixed(2) + "deg"
+            );
+
+            card.style.setProperty("--shine-x", x * 100 + "%");
+            card.style.setProperty("--shine-y", y * 100 + "%");
+          });
+        });
+
+        card.addEventListener("pointerleave", () => {
+          cancelAnimationFrame(frame);
+          reset(card);
+        });
+      });
+
+      const resetAll = () => {
+        cards.forEach(reset);
+      };
+
+      motionQuery.addEventListener("change", resetAll);
+      pointerQuery.addEventListener("change", resetAll);
     })();
   </script>
 </body>
